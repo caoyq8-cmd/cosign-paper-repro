@@ -1,0 +1,24 @@
+C2 EDM-256 formal-architecture feasibility test: PASS
+
+Dataset: 897 USCT training targets
+Architecture: CoSIGN-style EDM, base channels=256, residual blocks=2
+Input: single-channel 256x256 normalized speed field
+Precision: FP16
+Batch size: 2
+Microbatch: 1
+Schedule sampler: lognormal
+Weight schedule: Karras
+sigma_min: 0.002
+sigma_max: 80
+
+Result:
+- completed 100 successful optimization steps
+- one dynamic-loss-scaling overflow occurred and recovered
+- final loss remained finite
+- final gradient norm remained finite
+- checkpoints were saved successfully
+
+Note:
+This run used lr_anneal_steps=100 and is therefore treated only as a
+feasibility/warm-up experiment. It is NOT used as the starting checkpoint
+of the formal 20k training run.

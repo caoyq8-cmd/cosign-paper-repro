@@ -1,0 +1,768 @@
+================================================================================
+C5 ANO / MgNO PREFLIGHT
+================================================================================
+
+===== 1. MGNO / MULTIGRID / NEURAL OPERATOR FILES =====
+/home/featurize/work/USCT_repro/USCT_download/inspect_wavefield_dataset.py
+
+===== 2. CBS / BCBS FILES =====
+/home/featurize/work/USCT_repro/USCT_download/analyze_neural_cbs_gradient_consistency.py
+/home/featurize/work/USCT_repro/USCT_download/analyze_neural_cbs_gradient_consistency_v2.py
+/home/featurize/work/USCT_repro/USCT_download/batch_run_cbs_physics_correction.py
+/home/featurize/work/USCT_repro/USCT_download/cbs_model.py
+/home/featurize/work/USCT_repro/USCT_download/check_neural_cbs_directional_derivative.py
+/home/featurize/work/USCT_repro/USCT_download/check_self_consistent_cbs.py
+/home/featurize/work/USCT_repro/USCT_download/dataset_cbs_aligned.py
+/home/featurize/work/USCT_repro/USCT_download/evaluate_cbs_correction_unified.py
+/home/featurize/work/USCT_repro/USCT_download/generate_local_alpha_cbs_dataset.py
+/home/featurize/work/USCT_repro/USCT_download/generate_self_consistent_cbs_dataset.py
+/home/featurize/work/USCT_repro/USCT_download/precompute_cbs_adjoint_teacher_cache.py
+/home/featurize/work/USCT_repro/USCT_download/precompute_cbs_adjoint_teacher_cache_v2.py
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_adjoint_multistep_localalpha_v2.py
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_dobs_definition_check.py
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_forward_alignment_sweep.py
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_physics_correction.py
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_sanity_check.py
+/home/featurize/work/USCT_repro/USCT_download/run_g3_ensemble_cbs_guard_dev30_frozen.py
+/home/featurize/work/USCT_repro/USCT_download/run_inversion_cbs_bridge.py
+/home/featurize/work/USCT_repro/USCT_download/run_inversion_cbs_bridge_sweep.py
+/home/featurize/work/USCT_repro/USCT_download/run_neural_proposal_cbs_validated_correction.py
+/home/featurize/work/USCT_repro/USCT_download/run_stable_cbs_ablation_batch.py
+/home/featurize/work/USCT_repro/USCT_download/test_cbs_pipeline.py
+/home/featurize/work/USCT_repro/USCT_download/thesis_eval_saved_cbs_results (1).py
+/home/featurize/work/USCT_repro/USCT_download/thesis_eval_saved_cbs_results.py
+/home/featurize/work/USCT_repro/USCT_download/train_inversionnet_cbs_aligned.py
+/home/featurize/work/USCT_repro/USCT_download/utils_cbs.py
+/home/featurize/work/USCT_repro/USCT_download/validate_g3_ensemble_true_cbs_val20.py
+
+===== 3. ADJOINT / SURROGATE FILES =====
+/home/featurize/work/USCT_repro/USCT_download/analyze_neural_cbs_gradient_consistency.py
+/home/featurize/work/USCT_repro/USCT_download/analyze_neural_cbs_gradient_consistency_v2.py
+/home/featurize/work/USCT_repro/USCT_download/diffano_neural_adjoint.py
+/home/featurize/work/USCT_repro/USCT_download/eval_gradient_consistency.py
+/home/featurize/work/USCT_repro/USCT_download/generate_local_alpha_cbs_dataset.py
+/home/featurize/work/USCT_repro/USCT_download/precompute_cbs_adjoint_teacher_cache.py
+/home/featurize/work/USCT_repro/USCT_download/precompute_cbs_adjoint_teacher_cache_v2.py
+/home/featurize/work/USCT_repro/USCT_download/precompute_offpath_adjoint_teacher_cache.py
+/home/featurize/work/USCT_repro/USCT_download/run_adjoint_aware_multistep_correction.py
+/home/featurize/work/USCT_repro/USCT_download/run_adjoint_aware_multistep_correction_v2.py
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_adjoint_multistep_localalpha_v2.py
+/home/featurize/work/USCT_repro/USCT_download/run_diffano_neural_adjoint_smoke.py
+/home/featurize/work/USCT_repro/USCT_download/test_adjoint_descent.py
+/home/featurize/work/USCT_repro/USCT_download/train_adjoint_aware_surrogate_finetune.py
+/home/featurize/work/USCT_repro/USCT_download/train_adjoint_aware_surrogate_finetune_v2.py
+/home/featurize/work/USCT_repro/USCT_download/train_adjoint_aware_surrogate_finetune_v3.py
+/home/featurize/work/USCT_repro/USCT_download/train_diffano_neural_adjoint.py
+/home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/scripts/eval_c2_edm_teacher_val20.py
+
+===== 4. RELEVANT CLASSES / FUNCTIONS =====
+/home/featurize/work/USCT_repro/USCT_download/train_conditional_speed_refiner_v73.py:48:def image_gradients(img):
+/home/featurize/work/USCT_repro/USCT_download/precompute_cbs_adjoint_teacher_cache.py:33:from cbs_model import ConvergentBornSeries_Batch, ConvergentBornSeries_Batch_Adjoint
+/home/featurize/work/USCT_repro/USCT_download/precompute_cbs_adjoint_teacher_cache.py:92:    model = ConvergentBornSeries_Batch(
+/home/featurize/work/USCT_repro/USCT_download/precompute_cbs_adjoint_teacher_cache.py:110:    adj = ConvergentBornSeries_Batch_Adjoint(
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_adjoint_multistep_localalpha_v2.py:37:from cbs_model import ConvergentBornSeries_Batch, ConvergentBornSeries_Batch_Adjoint
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_adjoint_multistep_localalpha_v2.py:151:    model = ConvergentBornSeries_Batch(
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_adjoint_multistep_localalpha_v2.py:170:def cbs_adjoint_gradient_240(c240, target_dobs, src_indices, rec_indices, args, device):
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_adjoint_multistep_localalpha_v2.py:179:    model = ConvergentBornSeries_Batch(
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_adjoint_multistep_localalpha_v2.py:194:    adj = ConvergentBornSeries_Batch_Adjoint(
+/home/featurize/work/USCT_repro/USCT_download/test_adjoint_descent.py:9:from cbs_model import ConvergentBornSeries_Batch, ConvergentBornSeries_Batch_Adjoint
+/home/featurize/work/USCT_repro/USCT_download/test_adjoint_descent.py:138:    model_gt = ConvergentBornSeries_Batch(
+/home/featurize/work/USCT_repro/USCT_download/test_adjoint_descent.py:187:        model_cur = ConvergentBornSeries_Batch(
+/home/featurize/work/USCT_repro/USCT_download/test_adjoint_descent.py:203:        adj_model = ConvergentBornSeries_Batch_Adjoint(
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_sanity_check.py:12:from cbs_model import ConvergentBornSeries_Batch
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_sanity_check.py:136:    cbs_model = ConvergentBornSeries_Batch(
+/home/featurize/work/USCT_repro/USCT_download/train_residual_refiner_v73.py:43:def image_gradients(img):
+/home/featurize/work/USCT_repro/USCT_download/train_icrfm_v73.py:304:def image_gradients(x: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor]:
+/home/featurize/work/USCT_repro/USCT_download/run_neural_proposal_cbs_validated_correction.py:240:    from cbs_model import ConvergentBornSeries_Batch
+/home/featurize/work/USCT_repro/USCT_download/run_neural_proposal_cbs_validated_correction.py:244:    model = ConvergentBornSeries_Batch(
+/home/featurize/work/USCT_repro/USCT_download/run_adjoint_aware_multistep_correction.py:48:from cbs_model import ConvergentBornSeries_Batch
+/home/featurize/work/USCT_repro/USCT_download/run_adjoint_aware_multistep_correction.py:147:    model = ConvergentBornSeries_Batch(
+/home/featurize/work/USCT_repro/USCT_download/train_icrfm_oof_v2.py:304:def image_gradients(x: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor]:
+/home/featurize/work/USCT_repro/USCT_download/check_neural_cbs_directional_derivative.py:43:from cbs_model import ConvergentBornSeries_Batch, ConvergentBornSeries_Batch_Adjoint
+/home/featurize/work/USCT_repro/USCT_download/check_neural_cbs_directional_derivative.py:108:    model = ConvergentBornSeries_Batch(
+/home/featurize/work/USCT_repro/USCT_download/check_neural_cbs_directional_derivative.py:131:def cbs_gradient(c480, target_dobs, src_indices, rec_indices, args, device):
+/home/featurize/work/USCT_repro/USCT_download/check_neural_cbs_directional_derivative.py:134:    model = ConvergentBornSeries_Batch(
+/home/featurize/work/USCT_repro/USCT_download/check_neural_cbs_directional_derivative.py:152:    adj = ConvergentBornSeries_Batch_Adjoint(
+/home/featurize/work/USCT_repro/USCT_download/run_neural_measurement_correction.py:261:    from cbs_model import ConvergentBornSeries_Batch
+/home/featurize/work/USCT_repro/USCT_download/run_neural_measurement_correction.py:265:    model = ConvergentBornSeries_Batch(
+/home/featurize/work/USCT_repro/USCT_download/train_inversionnet_baseline.py:88:def image_gradients(img: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor]:
+/home/featurize/work/USCT_repro/USCT_download/train_adjoint_aware_surrogate_finetune.py:124:def normalized_gradient_cosine(g_pred, g_teacher, eps=1e-12):
+/home/featurize/work/USCT_repro/USCT_download/check_condition_physics_residual.py:12:from cbs_model import ConvergentBornSeries_Batch
+/home/featurize/work/USCT_repro/USCT_download/check_condition_physics_residual.py:30:    model = ConvergentBornSeries_Batch(
+/home/featurize/work/USCT_repro/USCT_download/generate_local_alpha_cbs_dataset.py:37:    from cbs_model import ConvergentBornSeries_Batch
+/home/featurize/work/USCT_repro/USCT_download/generate_local_alpha_cbs_dataset.py:41:    model = ConvergentBornSeries_Batch(
+/home/featurize/work/USCT_repro/USCT_download/run_dps_smoke_test.py:175:    from cbs_model import ConvergentBornSeries_Batch, ConvergentBornSeries_Batch_Adjoint
+/home/featurize/work/USCT_repro/USCT_download/run_dps_smoke_test.py:215:    cbs_batch_one = 1500 * torch.ones_like(output_cbs_batch, device=device)
+/home/featurize/work/USCT_repro/USCT_download/run_dps_smoke_test.py:217:    image_mask = (output_cbs_batch > 1500.1) | (output_cbs_batch < 1499.9)
+/home/featurize/work/USCT_repro/USCT_download/run_dps_smoke_test.py:247:    def neural_cbs_gradient_descent_dps(pred_batch, image_mask, downsampled_input_batch, downsampled_input_mask,
+/home/featurize/work/USCT_repro/USCT_download/run_dps_smoke_test.py:252:            model_pred = ConvergentBornSeries_Batch(
+/home/featurize/work/USCT_repro/USCT_download/run_dps_smoke_test.py:261:            model_pred_grad = ConvergentBornSeries_Batch_Adjoint(
+/home/featurize/work/USCT_repro/USCT_download/run_dps_smoke_test.py:268:            pred_cbs_batch_grad, loss_value = model_pred_grad(u_pred, max_iters=args.cbs_iters)
+/home/featurize/work/USCT_repro/USCT_download/run_dps_smoke_test.py:270:            pred_cbs_batch = pred_cbs_batch.clone()
+/home/featurize/work/USCT_repro/USCT_download/run_dps_smoke_test.py:271:            pred_cbs_batch[image_mask] -= step_scale * pred_cbs_batch_grad[image_mask]
+/home/featurize/work/USCT_repro/USCT_download/train_adjoint_aware_surrogate_finetune_v2.py:124:def normalized_gradient_cosine(g_pred, g_teacher, eps=1e-12):
+/home/featurize/work/USCT_repro/USCT_download/run_adjoint_aware_multistep_correction_v2.py:48:from cbs_model import ConvergentBornSeries_Batch
+/home/featurize/work/USCT_repro/USCT_download/run_adjoint_aware_multistep_correction_v2.py:147:    model = ConvergentBornSeries_Batch(
+/home/featurize/work/USCT_repro/USCT_download/train_adjoint_aware_surrogate_finetune_v3.py:124:def normalized_gradient_cosine(g_pred, g_teacher, eps=1e-12):
+/home/featurize/work/USCT_repro/USCT_download/check_self_consistent_cbs.py:7:from cbs_model import ConvergentBornSeries_Batch
+/home/featurize/work/USCT_repro/USCT_download/check_self_consistent_cbs.py:14:    model = ConvergentBornSeries_Batch(
+/home/featurize/work/USCT_repro/USCT_download/analyze_neural_cbs_gradient_consistency.py:16:from cbs_model import ConvergentBornSeries_Batch, ConvergentBornSeries_Batch_Adjoint
+/home/featurize/work/USCT_repro/USCT_download/analyze_neural_cbs_gradient_consistency.py:87:    model = ConvergentBornSeries_Batch(
+/home/featurize/work/USCT_repro/USCT_download/analyze_neural_cbs_gradient_consistency.py:106:    adj = ConvergentBornSeries_Batch_Adjoint(
+/home/featurize/work/USCT_repro/USCT_download/analyze_neural_cbs_gradient_consistency.py:135:    model = ConvergentBornSeries_Batch(
+/home/featurize/work/USCT_repro/USCT_download/test_cbs_pipeline.py:8:from cbs_model import ConvergentBornSeries_Batch, ConvergentBornSeries_Batch_Adjoint
+/home/featurize/work/USCT_repro/USCT_download/test_cbs_pipeline.py:95:    cbs_batch_one = 1500.0 * torch.ones_like(output_cbs_batch).to(device)
+/home/featurize/work/USCT_repro/USCT_download/test_cbs_pipeline.py:97:    print("output_cbs_batch shape:", output_cbs_batch.shape)
+/home/featurize/work/USCT_repro/USCT_download/test_cbs_pipeline.py:98:    print("cbs_batch_one shape:", cbs_batch_one.shape)
+/home/featurize/work/USCT_repro/USCT_download/test_cbs_pipeline.py:143:    model_gt = ConvergentBornSeries_Batch(
+/home/featurize/work/USCT_repro/USCT_download/test_cbs_pipeline.py:179:    model_bg = ConvergentBornSeries_Batch(
+/home/featurize/work/USCT_repro/USCT_download/test_cbs_pipeline.py:201:    adj_model = ConvergentBornSeries_Batch_Adjoint(
+/home/featurize/work/USCT_repro/USCT_download/2080Ti/train_inversion_refiner.py:88:def image_gradients(img: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor]:
+/home/featurize/work/USCT_repro/USCT_download/2080Ti/train_inversionnet_baseline.py:88:def image_gradients(img: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor]:
+/home/featurize/work/USCT_repro/USCT_download/validate_g3_ensemble_true_cbs_val20.py:27:from cbs_model import ConvergentBornSeries_Batch
+/home/featurize/work/USCT_repro/USCT_download/validate_g3_ensemble_true_cbs_val20.py:135:    model = ConvergentBornSeries_Batch(
+/home/featurize/work/USCT_repro/USCT_download/generate_self_consistent_cbs_dataset.py:12:from cbs_model import ConvergentBornSeries_Batch
+/home/featurize/work/USCT_repro/USCT_download/generate_self_consistent_cbs_dataset.py:99:    model = ConvergentBornSeries_Batch(
+/home/featurize/work/USCT_repro/USCT_download/4090/train_unet_openbreastus_oldstyle_v3.py:157:def image_gradients(img: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor]:
+/home/featurize/work/USCT_repro/USCT_download/4090/train_unet_ablation.py:156:def image_gradients(img: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor]:
+/home/featurize/work/USCT_repro/USCT_download/analyze_neural_cbs_gradient_consistency_v2.py:16:from cbs_model import ConvergentBornSeries_Batch, ConvergentBornSeries_Batch_Adjoint
+/home/featurize/work/USCT_repro/USCT_download/analyze_neural_cbs_gradient_consistency_v2.py:92:    model = ConvergentBornSeries_Batch(
+/home/featurize/work/USCT_repro/USCT_download/analyze_neural_cbs_gradient_consistency_v2.py:111:    adj = ConvergentBornSeries_Batch_Adjoint(
+/home/featurize/work/USCT_repro/USCT_download/analyze_neural_cbs_gradient_consistency_v2.py:148:    model = ConvergentBornSeries_Batch(
+/home/featurize/work/USCT_repro/USCT_download/run_stable_cbs_ablation_batch.py:3:"""Batch ablation for the Stable CBS correction mechanism.
+/home/featurize/work/USCT_repro/USCT_download/precompute_cbs_adjoint_teacher_cache_v2.py:33:from cbs_model import ConvergentBornSeries_Batch, ConvergentBornSeries_Batch_Adjoint
+/home/featurize/work/USCT_repro/USCT_download/precompute_cbs_adjoint_teacher_cache_v2.py:92:    model = ConvergentBornSeries_Batch(
+/home/featurize/work/USCT_repro/USCT_download/precompute_cbs_adjoint_teacher_cache_v2.py:110:    adj = ConvergentBornSeries_Batch_Adjoint(
+/home/featurize/work/USCT_repro/USCT_download/cbs_model.py:291:class ConvergentBornSeries_Batch(nn.Module):
+/home/featurize/work/USCT_repro/USCT_download/cbs_model.py:437:class ConvergentBornSeries_Batch_Adjoint(ConvergentBornSeries_Batch):
+/home/featurize/work/USCT_repro/USCT_download/cbs_model.py:474:def select_random_batch(file, transmitter_indices, cbs_batch_size, downsampled_input_mask):
+/home/featurize/work/USCT_repro/USCT_download/cbs_model.py:477:        random_batch_list = random.sample(range(0, int(256/sparse_ratio)), cbs_batch_size) 
+/home/featurize/work/USCT_repro/USCT_download/cbs_model.py:483:        random_batch_list = random.sample(range(0, int(256/sparse_ratio)), cbs_batch_size) 
+/home/featurize/work/USCT_repro/USCT_download/cbs_model.py:488:        random_batch_list = random.sample(range(0, 64), cbs_batch_size) 
+/home/featurize/work/USCT_repro/USCT_download/cbs_model.py:493:        random_batch_list = random.sample(range(0, 32), cbs_batch_size) 
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_physics_correction.py:13:from cbs_model import ConvergentBornSeries_Batch, ConvergentBornSeries_Batch_Adjoint
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_physics_correction.py:182:    model = ConvergentBornSeries_Batch(
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_physics_correction.py:207:def compute_adjoint_grad(sos_480, dobs_gt, src_indices, rec_indices, args, device):
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_physics_correction.py:215:    model = ConvergentBornSeries_Batch(
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_physics_correction.py:233:    adj = ConvergentBornSeries_Batch_Adjoint(
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_dobs_definition_check.py:12:from cbs_model import ConvergentBornSeries_Batch
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_dobs_definition_check.py:184:        model = ConvergentBornSeries_Batch(
+/home/featurize/work/USCT_repro/USCT_download/train_inversionnet_ablation.py:89:def image_gradients(img: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor]:
+/home/featurize/work/USCT_repro/USCT_download/diffano_neural_adjoint.py:194:def neural_adjoint_gradient(
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_forward_alignment_sweep.py:13:from cbs_model import ConvergentBornSeries_Batch
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_forward_alignment_sweep.py:87:    model = ConvergentBornSeries_Batch(
+/home/featurize/work/USCT_repro/USCT_download/batch_run_cbs_physics_correction.py:203:        description="Batch runner for stable CBS correction and paper ablations."
+/home/featurize/work/USCT_repro/USCT_download/run_inversion_cbs_bridge.py:15:from cbs_model import ConvergentBornSeries_Batch, ConvergentBornSeries_Batch_Adjoint
+/home/featurize/work/USCT_repro/USCT_download/run_inversion_cbs_bridge.py:400:        model_cur = ConvergentBornSeries_Batch(
+/home/featurize/work/USCT_repro/USCT_download/run_inversion_cbs_bridge.py:413:        adj_model = ConvergentBornSeries_Batch_Adjoint(
+/home/featurize/work/USCT_repro/USCT_download/run_dds_smoke_test.py:208:    from cbs_model import ConvergentBornSeries_Batch, ConvergentBornSeries_Batch_Adjoint
+/home/featurize/work/USCT_repro/USCT_download/run_dds_smoke_test.py:239:    image_mask = (output_cbs_batch > 1500.1) | (output_cbs_batch < 1499.9)
+/home/featurize/work/USCT_repro/USCT_download/run_dds_smoke_test.py:301:            model_pred = ConvergentBornSeries_Batch(
+/home/featurize/work/USCT_repro/USCT_download/run_dds_smoke_test.py:311:            model_pred_grad = ConvergentBornSeries_Batch_Adjoint(
+/home/featurize/work/USCT_repro/USCT_download/train_hf_refiner.py:91:def image_gradients(img: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor]:
+
+===== 5. SOURCE / RECEIVER GEOMETRY =====
+/home/featurize/work/USCT_repro/USCT_download/precompute_cbs_adjoint_teacher_cache.py:98:        src_loc_set=src_indices.astype(np.int64),
+/home/featurize/work/USCT_repro/USCT_download/precompute_cbs_adjoint_teacher_cache.py:112:        rec_loc=rec_t,
+/home/featurize/work/USCT_repro/USCT_download/precompute_cbs_adjoint_teacher_cache.py:113:        dobs_500k_batch=target_t,
+/home/featurize/work/USCT_repro/USCT_download/precompute_cbs_adjoint_teacher_cache.py:114:        dobs_500k_mask=mask,
+/home/featurize/work/USCT_repro/USCT_download/precompute_cbs_adjoint_teacher_cache.py:152:    ap.add_argument("--frequency", type=float, default=500000.0)
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_adjoint_multistep_localalpha_v2.py:157:        src_loc_set=src_indices.astype(np.int64),
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_adjoint_multistep_localalpha_v2.py:185:        src_loc_set=src_indices.astype(np.int64),
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_adjoint_multistep_localalpha_v2.py:196:        rec_loc=rec_t,
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_adjoint_multistep_localalpha_v2.py:197:        dobs_500k_batch=target_t,
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_adjoint_multistep_localalpha_v2.py:198:        dobs_500k_mask=mask,
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_adjoint_multistep_localalpha_v2.py:258:    ap.add_argument("--frequency", type=float, default=500000.0)
+/home/featurize/work/USCT_repro/USCT_download/run_diffano_neural_adjoint_smoke.py:20:    dobs_path: str = "Datasets_test/AI4Scup2_simulated_CBS_sparse/dobs_500k/eval/train_6601.npy"
+/home/featurize/work/USCT_repro/USCT_download/test_adjoint_descent.py:77:        "frequency": "500k",
+/home/featurize/work/USCT_repro/USCT_download/test_adjoint_descent.py:85:        "base_dir_dobs_500k_train": "Datasets_test/AI4Scup2_simulated_CBS_sparse/dobs_500k/train",
+/home/featurize/work/USCT_repro/USCT_download/test_adjoint_descent.py:86:        "base_dir_dobs_500k_eval": "Datasets_test/AI4Scup2_simulated_CBS_sparse/dobs_500k/eval",
+/home/featurize/work/USCT_repro/USCT_download/test_adjoint_descent.py:126:    num_src = transmitter_indices.shape[0]
+/home/featurize/work/USCT_repro/USCT_download/test_adjoint_descent.py:127:    num_rec = receiver_indices.shape[0]
+/home/featurize/work/USCT_repro/USCT_download/test_adjoint_descent.py:128:    receiver_mask = torch.ones((num_src, num_rec), dtype=torch.float32, device=device)
+/home/featurize/work/USCT_repro/USCT_download/test_adjoint_descent.py:145:        src_loc_set=transmitter_indices.cpu().numpy()
+/home/featurize/work/USCT_repro/USCT_download/test_adjoint_descent.py:194:            src_loc_set=transmitter_indices.cpu().numpy()
+/home/featurize/work/USCT_repro/USCT_download/test_adjoint_descent.py:205:            rec_loc=receiver_indices.to(device),
+/home/featurize/work/USCT_repro/USCT_download/test_adjoint_descent.py:206:            dobs_500k_batch=dobs_gt,
+/home/featurize/work/USCT_repro/USCT_download/test_adjoint_descent.py:207:            dobs_500k_mask=receiver_mask
+/home/featurize/work/USCT_repro/USCT_download/train_diffano_neural_adjoint.py:21:    train_dobs_root: str = "Datasets_test/AI4Scup2_simulated_CBS_sparse/dobs_500k/train"
+/home/featurize/work/USCT_repro/USCT_download/train_diffano_neural_adjoint.py:23:    eval_dobs_root: str = "Datasets_test/AI4Scup2_simulated_CBS_sparse/dobs_500k/eval"
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_sanity_check.py:143:        src_loc_set=transmitter_indices.cpu().numpy(),
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_sanity_check.py:192:        "geometry_num_src": int(transmitter_indices.shape[0]),
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_sanity_check.py:193:        "geometry_num_rec": int(receiver_indices.shape[0]),
+/home/featurize/work/USCT_repro/USCT_download/run_neural_proposal_cbs_validated_correction.py:68:        num_receivers=64,
+/home/featurize/work/USCT_repro/USCT_download/run_neural_proposal_cbs_validated_correction.py:250:        src_loc_set=src_indices.astype(np.int64),
+/home/featurize/work/USCT_repro/USCT_download/run_neural_proposal_cbs_validated_correction.py:449:    parser.add_argument("--frequency", type=float, default=500000.0)
+/home/featurize/work/USCT_repro/USCT_download/run_adjoint_aware_multistep_correction.py:153:        src_loc_set=src_indices.astype(np.int64),
+/home/featurize/work/USCT_repro/USCT_download/run_adjoint_aware_multistep_correction.py:258:    ap.add_argument("--frequency", type=float, default=500000.0)
+/home/featurize/work/USCT_repro/USCT_download/run_g3_ensemble_cbs_guard_dev30_frozen.py:57:    "frequency": 500000.0,
+/home/featurize/work/USCT_repro/USCT_download/check_neural_cbs_directional_derivative.py:114:        src_loc_set=src_indices.astype(np.int64),
+/home/featurize/work/USCT_repro/USCT_download/check_neural_cbs_directional_derivative.py:140:        src_loc_set=src_indices.astype(np.int64),
+/home/featurize/work/USCT_repro/USCT_download/check_neural_cbs_directional_derivative.py:154:        rec_loc=rec_t,
+/home/featurize/work/USCT_repro/USCT_download/check_neural_cbs_directional_derivative.py:155:        dobs_500k_batch=target_t,
+/home/featurize/work/USCT_repro/USCT_download/check_neural_cbs_directional_derivative.py:156:        dobs_500k_mask=mask,
+/home/featurize/work/USCT_repro/USCT_download/check_neural_cbs_directional_derivative.py:304:    ap.add_argument("--frequency", type=float, default=500000.0)
+/home/featurize/work/USCT_repro/USCT_download/run_neural_measurement_correction.py:81:        num_receivers=64,
+/home/featurize/work/USCT_repro/USCT_download/run_neural_measurement_correction.py:271:        src_loc_set=src_indices.astype(np.int64),
+/home/featurize/work/USCT_repro/USCT_download/run_neural_measurement_correction.py:452:    parser.add_argument("--frequency", type=float, default=500000.0)
+/home/featurize/work/USCT_repro/USCT_download/train_dobs_matrix_residual_no.py:59:        self.num_sources, self.num_receivers = first["dobs_complex"].shape
+/home/featurize/work/USCT_repro/USCT_download/train_dobs_matrix_residual_no.py:61:        assert self.mean_dobs.shape == (self.num_sources, self.num_receivers), (
+/home/featurize/work/USCT_repro/USCT_download/train_dobs_matrix_residual_no.py:63:            (self.num_sources, self.num_receivers),
+/home/featurize/work/USCT_repro/USCT_download/train_dobs_matrix_residual_no.py:77:            f"image_size={image_size}, dobs_shape=({self.num_sources},{self.num_receivers}), "
+/home/featurize/work/USCT_repro/USCT_download/train_dobs_matrix_residual_no.py:262:        num_receivers=train_set.num_receivers,
+/home/featurize/work/USCT_repro/USCT_download/train_dobs_matrix_residual_no.py:430:        num_receivers=test_set.num_receivers,
+/home/featurize/work/USCT_repro/USCT_download/train_adjoint_aware_surrogate_finetune.py:289:        num_receivers=64,
+/home/featurize/work/USCT_repro/USCT_download/check_condition_physics_residual.py:36:        src_loc_set=src_indices.astype(np.int64),
+/home/featurize/work/USCT_repro/USCT_download/batch_run_hybrid_correction.py:55:    parser.add_argument("--frequency", type=float, default=500000.0)
+/home/featurize/work/USCT_repro/USCT_download/generate_local_alpha_cbs_dataset.py:47:        src_loc_set=src_indices.astype(np.int64),
+/home/featurize/work/USCT_repro/USCT_download/generate_local_alpha_cbs_dataset.py:247:    parser.add_argument("--frequency", type=float, default=500000.0)
+/home/featurize/work/USCT_repro/USCT_download/run_dps_smoke_test.py:39:        "frequency": "500k",
+/home/featurize/work/USCT_repro/USCT_download/run_dps_smoke_test.py:47:        file["base_dir_dobs_500k_train"] = str(dataset_root / "dobs_500k" / "train")
+/home/featurize/work/USCT_repro/USCT_download/run_dps_smoke_test.py:48:        file["base_dir_dobs_500k_eval"] = str(dataset_root / "dobs_500k" / "eval")
+/home/featurize/work/USCT_repro/USCT_download/run_dps_smoke_test.py:70:        file["base_dir_dobs_500k_train"] = str(dataset_root / "dobs_500k" / "train")
+/home/featurize/work/USCT_repro/USCT_download/run_dps_smoke_test.py:71:        file["base_dir_dobs_500k_eval"] = str(dataset_root / "dobs_500k" / "eval")
+/home/featurize/work/USCT_repro/USCT_download/run_dps_smoke_test.py:226:    downsampled_dobs_500k_batch = dobs_complex_all[args.noise_index:args.noise_index + 1]
+/home/featurize/work/USCT_repro/USCT_download/run_dps_smoke_test.py:228:    print("downsampled_dobs shape =", tuple(downsampled_dobs_500k_batch.shape))
+/home/featurize/work/USCT_repro/USCT_download/run_dps_smoke_test.py:258:                src_loc_set=file["transmitter_indices"],
+/home/featurize/work/USCT_repro/USCT_download/run_dps_smoke_test.py:263:                rec_loc=file["receiver_indices"],
+/home/featurize/work/USCT_repro/USCT_download/run_dps_smoke_test.py:264:                dobs_500k_batch=downsampled_input_batch,
+/home/featurize/work/USCT_repro/USCT_download/run_dps_smoke_test.py:265:                dobs_500k_mask=file["downsampled_input_mask"],
+/home/featurize/work/USCT_repro/USCT_download/run_dps_smoke_test.py:362:        downsampled_dobs_500k_batch,
+/home/featurize/work/USCT_repro/USCT_download/train_dobs_matrix_residual_pairwise_no.py:478:        num_receivers=64,
+/home/featurize/work/USCT_repro/USCT_download/train_dobs_matrix_residual_pairwise_no.py:642:        num_receivers=64,
+/home/featurize/work/USCT_repro/USCT_download/train_adjoint_aware_surrogate_finetune_v2.py:289:        num_receivers=64,
+/home/featurize/work/USCT_repro/USCT_download/run_adjoint_aware_multistep_correction_v2.py:153:        src_loc_set=src_indices.astype(np.int64),
+/home/featurize/work/USCT_repro/USCT_download/run_adjoint_aware_multistep_correction_v2.py:262:    ap.add_argument("--frequency", type=float, default=500000.0)
+/home/featurize/work/USCT_repro/USCT_download/test_inversionnet_forward.py:55:        "frequency": "500k",
+/home/featurize/work/USCT_repro/USCT_download/test_inversionnet_forward.py:60:        "base_dir_dobs_500k_train": "Datasets_test/AI4Scup2_simulated_CBS_sparse/dobs_500k/train",
+/home/featurize/work/USCT_repro/USCT_download/test_inversionnet_forward.py:61:        "base_dir_dobs_500k_eval": "Datasets_test/AI4Scup2_simulated_CBS_sparse/dobs_500k/eval",
+/home/featurize/work/USCT_repro/USCT_download/train_adjoint_aware_surrogate_finetune_v3.py:301:        num_receivers=64,
+/home/featurize/work/USCT_repro/USCT_download/train_inversionnet_cbs_aligned.py:24:    train_dobs_root: str = "Datasets_train/AI4Scup2_simulated_CBS_sparse/dobs_500k/train"
+/home/featurize/work/USCT_repro/USCT_download/train_inversionnet_cbs_aligned.py:26:    eval_dobs_root: str = "Datasets_test/AI4Scup2_simulated_CBS_sparse/dobs_500k/eval"
+/home/featurize/work/USCT_repro/USCT_download/run_structure_preserving_dev30.py:720:    parser.add_argument("--frequency", type=float, default=500000.0)
+/home/featurize/work/USCT_repro/USCT_download/check_self_consistent_cbs.py:20:        src_loc_set=src_indices.astype(np.int64),
+/home/featurize/work/USCT_repro/USCT_download/train_dobs_matrix_no.py:60:        self.num_sources, self.num_receivers = first["dobs_complex"].shape
+/home/featurize/work/USCT_repro/USCT_download/train_dobs_matrix_no.py:73:            f"image_size={image_size}, dobs_shape=({self.num_sources},{self.num_receivers})"
+/home/featurize/work/USCT_repro/USCT_download/train_dobs_matrix_no.py:157:        num_receivers=64,
+/home/featurize/work/USCT_repro/USCT_download/train_dobs_matrix_no.py:166:        self.num_receivers = num_receivers
+/home/featurize/work/USCT_repro/USCT_download/train_dobs_matrix_no.py:179:        out_dim = 2 * num_sources * num_receivers
+/home/featurize/work/USCT_repro/USCT_download/train_dobs_matrix_no.py:202:        out = out.view(x.shape[0], 2, self.num_sources, self.num_receivers)
+/home/featurize/work/USCT_repro/USCT_download/train_dobs_matrix_no.py:314:        num_receivers=train_set.num_receivers,
+/home/featurize/work/USCT_repro/USCT_download/train_dobs_matrix_no.py:474:        num_receivers=test_set.num_receivers,
+/home/featurize/work/USCT_repro/USCT_download/analyze_neural_cbs_gradient_consistency.py:93:        src_loc_set=src_indices.astype(np.int64),
+/home/featurize/work/USCT_repro/USCT_download/analyze_neural_cbs_gradient_consistency.py:108:        rec_loc=rec_t,
+/home/featurize/work/USCT_repro/USCT_download/analyze_neural_cbs_gradient_consistency.py:109:        dobs_500k_batch=target_t,
+/home/featurize/work/USCT_repro/USCT_download/analyze_neural_cbs_gradient_consistency.py:110:        dobs_500k_mask=mask,
+/home/featurize/work/USCT_repro/USCT_download/analyze_neural_cbs_gradient_consistency.py:141:        src_loc_set=src_indices.astype(np.int64),
+/home/featurize/work/USCT_repro/USCT_download/analyze_neural_cbs_gradient_consistency.py:251:    parser.add_argument("--frequency", type=float, default=500000.0)
+/home/featurize/work/USCT_repro/USCT_download/test_cbs_pipeline.py:52:        "frequency": "500k",
+/home/featurize/work/USCT_repro/USCT_download/test_cbs_pipeline.py:63:        "base_dir_dobs_500k_train": "Datasets_test/AI4Scup2_simulated_CBS_sparse/dobs_500k/train",
+/home/featurize/work/USCT_repro/USCT_download/test_cbs_pipeline.py:64:        "base_dir_dobs_500k_eval": "Datasets_test/AI4Scup2_simulated_CBS_sparse/dobs_500k/eval",
+/home/featurize/work/USCT_repro/USCT_download/test_cbs_pipeline.py:76:        data_dict["base_dir_dobs_500k_eval"],
+/home/featurize/work/USCT_repro/USCT_download/test_cbs_pipeline.py:77:        sorted(os.listdir(data_dict["base_dir_dobs_500k_eval"]))[0]
+/home/featurize/work/USCT_repro/USCT_download/test_cbs_pipeline.py:134:    num_src = transmitter_indices.shape[0]
+/home/featurize/work/USCT_repro/USCT_download/test_cbs_pipeline.py:135:    num_rec = receiver_indices.shape[0]
+/home/featurize/work/USCT_repro/USCT_download/test_cbs_pipeline.py:136:    downsampled_input_mask = torch.ones((num_src, num_rec), dtype=torch.float32, device=device)
+/home/featurize/work/USCT_repro/USCT_download/test_cbs_pipeline.py:150:        src_loc_set=transmitter_indices.cpu().numpy()
+/home/featurize/work/USCT_repro/USCT_download/test_cbs_pipeline.py:186:        src_loc_set=transmitter_indices.cpu().numpy()
+/home/featurize/work/USCT_repro/USCT_download/test_cbs_pipeline.py:203:        rec_loc=receiver_indices.to(device),
+/home/featurize/work/USCT_repro/USCT_download/test_cbs_pipeline.py:204:        dobs_500k_batch=dobs_gt,
+/home/featurize/work/USCT_repro/USCT_download/test_cbs_pipeline.py:205:        dobs_500k_mask=downsampled_input_mask
+/home/featurize/work/USCT_repro/USCT_download/train_direct_dobs_no.py:109:        self.num_receivers = first["dobs_complex"].shape[1]
+/home/featurize/work/USCT_repro/USCT_download/train_direct_dobs_no.py:123:            f"num_receivers={self.num_receivers}, items={len(self.index)}, "
+/home/featurize/work/USCT_repro/USCT_download/train_direct_dobs_no.py:231:    def __init__(self, in_ch=5, base_ch=24, num_sources=64, num_receivers=64, emb_dim=32):
+/home/featurize/work/USCT_repro/USCT_download/train_direct_dobs_no.py:235:        self.num_receivers = num_receivers
+/home/featurize/work/USCT_repro/USCT_download/train_direct_dobs_no.py:256:            nn.Linear(4 * b, 2 * num_receivers),
+/home/featurize/work/USCT_repro/USCT_download/train_direct_dobs_no.py:273:        out = out.view(x.shape[0], 2, self.num_receivers)
+/home/featurize/work/USCT_repro/USCT_download/train_direct_dobs_no.py:394:        num_receivers=train_set.num_receivers,
+/home/featurize/work/USCT_repro/USCT_download/train_direct_dobs_no.py:556:        num_receivers=test_set.num_receivers,
+/home/featurize/work/USCT_repro/USCT_download/validate_g3_ensemble_true_cbs_val20.py:141:        src_loc_set=src_indices.astype(np.int64),
+/home/featurize/work/USCT_repro/USCT_download/validate_g3_ensemble_true_cbs_val20.py:234:    ap.add_argument("--frequency", type=float, default=500000.0)
+/home/featurize/work/USCT_repro/USCT_download/validate_g3_ensemble_true_cbs_val20.py:461:            rows, "raw_g3", args.seed + 500000, args.bootstrap_samples
+/home/featurize/work/USCT_repro/USCT_download/generate_self_consistent_cbs_dataset.py:94:        dobs: [num_src, num_rec] complex64
+/home/featurize/work/USCT_repro/USCT_download/generate_self_consistent_cbs_dataset.py:95:        wavefields: [num_src, 480,480] complex64，可选
+/home/featurize/work/USCT_repro/USCT_download/generate_self_consistent_cbs_dataset.py:105:        src_loc_set=src_indices,
+/home/featurize/work/USCT_repro/USCT_download/generate_self_consistent_cbs_dataset.py:109:    u = model(max_iters=args.cbs_iters)  # [1, num_src, 480,480]
+/home/featurize/work/USCT_repro/USCT_download/generate_self_consistent_cbs_dataset.py:112:    dobs = u[0, :, rec_t[:, 0], rec_t[:, 1]]  # [num_src, num_rec]
+/home/featurize/work/USCT_repro/USCT_download/generate_self_consistent_cbs_dataset.py:164:        print("num_src/num_rec    =", src_indices.shape[0], rec_indices.shape[0])
+/home/featurize/work/USCT_repro/USCT_download/analyze_neural_cbs_gradient_consistency_v2.py:98:        src_loc_set=src_indices.astype(np.int64),
+/home/featurize/work/USCT_repro/USCT_download/analyze_neural_cbs_gradient_consistency_v2.py:113:        rec_loc=rec_t,
+/home/featurize/work/USCT_repro/USCT_download/analyze_neural_cbs_gradient_consistency_v2.py:114:        dobs_500k_batch=target_t,
+/home/featurize/work/USCT_repro/USCT_download/analyze_neural_cbs_gradient_consistency_v2.py:115:        dobs_500k_mask=mask,
+/home/featurize/work/USCT_repro/USCT_download/analyze_neural_cbs_gradient_consistency_v2.py:154:        src_loc_set=src_indices.astype(np.int64),
+/home/featurize/work/USCT_repro/USCT_download/analyze_neural_cbs_gradient_consistency_v2.py:264:    parser.add_argument("--frequency", type=float, default=500000.0)
+/home/featurize/work/USCT_repro/USCT_download/run_stable_cbs_ablation_batch.py:234:    ap.add_argument("--frequency", type=float, default=500000.0)
+/home/featurize/work/USCT_repro/USCT_download/precompute_cbs_adjoint_teacher_cache_v2.py:98:        src_loc_set=src_indices.astype(np.int64),
+/home/featurize/work/USCT_repro/USCT_download/precompute_cbs_adjoint_teacher_cache_v2.py:112:        rec_loc=rec_t,
+/home/featurize/work/USCT_repro/USCT_download/precompute_cbs_adjoint_teacher_cache_v2.py:113:        dobs_500k_batch=target_t,
+/home/featurize/work/USCT_repro/USCT_download/precompute_cbs_adjoint_teacher_cache_v2.py:114:        dobs_500k_mask=mask,
+/home/featurize/work/USCT_repro/USCT_download/precompute_cbs_adjoint_teacher_cache_v2.py:164:    ap.add_argument("--frequency", type=float, default=500000.0)
+/home/featurize/work/USCT_repro/USCT_download/cbs_model.py:11:                 src_loc=[30,60],
+/home/featurize/work/USCT_repro/USCT_download/cbs_model.py:31:        # Sources Location
+/home/featurize/work/USCT_repro/USCT_download/cbs_model.py:33:        self.src[src_loc[0],src_loc[1]] = 1.
+/home/featurize/work/USCT_repro/USCT_download/cbs_model.py:144:    def set_src_loc(self, src_loc=[30,60]):
+/home/featurize/work/USCT_repro/USCT_download/cbs_model.py:146:        self.src.data[src_loc[0],src_loc[1]] = 1.
+/home/featurize/work/USCT_repro/USCT_download/cbs_model.py:172:        # Sources Location # later as input!
+/home/featurize/work/USCT_repro/USCT_download/cbs_model.py:192:    def forward(self, src_loc_batch, max_iters=5, tol=1e-16):
+/home/featurize/work/USCT_repro/USCT_download/cbs_model.py:193:        # Set src_location and initial points
+/home/featurize/work/USCT_repro/USCT_download/cbs_model.py:194:        self.batch_size = src_loc_batch.shape[0]
+/home/featurize/work/USCT_repro/USCT_download/cbs_model.py:195:        self.src_batch = self.set_src_loc(src_loc_batch)
+/home/featurize/work/USCT_repro/USCT_download/cbs_model.py:280:    def set_src_loc(self, src_loc_batch = np.array([[30,60],[240,280]])):
+/home/featurize/work/USCT_repro/USCT_download/cbs_model.py:281:        batch_size = src_loc_batch.shape[0]
+/home/featurize/work/USCT_repro/USCT_download/cbs_model.py:286:            src_loc = src_loc_batch[i]
+/home/featurize/work/USCT_repro/USCT_download/cbs_model.py:287:            src_batch[i][src_loc[0],src_loc[1]] = 1
+/home/featurize/work/USCT_repro/USCT_download/cbs_model.py:298:                 src_loc_set = np.array([[30,60],[240,280]]), 
+/home/featurize/work/USCT_repro/USCT_download/cbs_model.py:316:        # Sources Location 
+/home/featurize/work/USCT_repro/USCT_download/cbs_model.py:317:        self.src_set = self.set_src_loc(src_loc_set) # [1, M, 480, 480]
+/home/featurize/work/USCT_repro/USCT_download/cbs_model.py:338:        # Set src_location and initial points
+/home/featurize/work/USCT_repro/USCT_download/cbs_model.py:427:    def set_src_loc(self, src_loc_set):
+/home/featurize/work/USCT_repro/USCT_download/cbs_model.py:428:        sample_size = src_loc_set.shape[0]
+/home/featurize/work/USCT_repro/USCT_download/cbs_model.py:433:            src_set[0, i, src_loc_set[i,0], src_loc_set[i,1]] = torch.tensor(1e+7)
+/home/featurize/work/USCT_repro/USCT_download/cbs_model.py:438:    def __init__(self, batch_model, rec_loc, dobs_500k_batch, dobs_500k_mask):
+/home/featurize/work/USCT_repro/USCT_download/cbs_model.py:440:        # masked_dobs_500k_batch 输入是 [N, 32/64, 32/64] 复数型  的 masked_noised_observation_input
+/home/featurize/work/USCT_repro/USCT_download/cbs_model.py:442:        self.dobs_500k_batch = dobs_500k_batch.to(batch_model.device)
+/home/featurize/work/USCT_repro/USCT_download/cbs_model.py:443:        self.dobs_500k_mask = torch.tensor(dobs_500k_mask).to(batch_model.device) # [M, L]
+/home/featurize/work/USCT_repro/USCT_download/cbs_model.py:444:        self.rec_loc = rec_loc # [L, 2] 是在 [480, 480] 图上的坐标点～
+/home/featurize/work/USCT_repro/USCT_download/cbs_model.py:448:        # rec_loc_batch 应该是 [32/64, 2] 的位置坐标和前面是一样的, u_batch 是 [N, M, 480, 480] 的声压分布图像 (M = 32/64)
+/home/featurize/work/USCT_repro/USCT_download/cbs_model.py:469:        self.rec_diff = - self.dobs_500k_batch + u_batch[:, :, self.rec_loc[:,0], self.rec_loc[:,1]] * self.dobs_500k_mask # y - A(x) 大小是 [N, M, L] (M = 32/64, L = 32/64)
+/home/featurize/work/USCT_repro/USCT_download/cbs_model.py:470:        rec_diff_batch[:, :, self.rec_loc[:,0], self.rec_loc[:,1]] = self.rec_diff * (1e+7)
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_physics_correction.py:188:        src_loc_set=src_indices.astype(np.int64),
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_physics_correction.py:221:        src_loc_set=src_indices.astype(np.int64),
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_physics_correction.py:235:        rec_loc=rec_t,
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_physics_correction.py:236:        dobs_500k_batch=dobs_t,
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_physics_correction.py:237:        dobs_500k_mask=mask,
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_dobs_definition_check.py:147:    parser.add_argument("--frequency_hz", type=float, default=500000.0)
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_dobs_definition_check.py:191:            src_loc_set=transmitter_indices.cpu().numpy(),
+/home/featurize/work/USCT_repro/USCT_download/screen_structure_preserving_first_step.py:285:    ap.add_argument("--frequency", type=float, default=500000.0)
+/home/featurize/work/USCT_repro/USCT_download/precompute_offpath_adjoint_teacher_cache.py:81:    ap.add_argument("--frequency", type=float, default=500000.0)
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_forward_alignment_sweep.py:94:        src_loc_set=transmitter_indices.cpu().numpy(),
+/home/featurize/work/USCT_repro/USCT_download/run_cbs_forward_alignment_sweep.py:139:    parser.add_argument("--frequencies_hz", type=str, default="500000")
+/home/featurize/work/USCT_repro/USCT_download/train_inversionnet_small.py:148:        "frequency": "500k",
+/home/featurize/work/USCT_repro/USCT_download/train_inversionnet_small.py:153:        "base_dir_dobs_500k_train": "Datasets_test/AI4Scup2_simulated_CBS_sparse/dobs_500k/train",
+/home/featurize/work/USCT_repro/USCT_download/train_inversionnet_small.py:154:        "base_dir_dobs_500k_eval": "Datasets_test/AI4Scup2_simulated_CBS_sparse/dobs_500k/eval",
+/home/featurize/work/USCT_repro/USCT_download/batch_run_cbs_physics_correction.py:235:    parser.add_argument("--frequency", type=float, default=500000)
+/home/featurize/work/USCT_repro/USCT_download/run_inversion_cbs_bridge.py:29:    base_dir_dobs_eval: str = "Datasets_test/AI4Scup2_simulated_CBS_sparse/dobs_500k/eval"
+/home/featurize/work/USCT_repro/USCT_download/run_inversion_cbs_bridge.py:227:    num_src = transmitter_indices.shape[0]
+/home/featurize/work/USCT_repro/USCT_download/run_inversion_cbs_bridge.py:228:    num_rec = receiver_indices.shape[0]
+/home/featurize/work/USCT_repro/USCT_download/run_inversion_cbs_bridge.py:229:    receiver_mask = torch.ones((num_src, num_rec), dtype=torch.float32, device=device)
+/home/featurize/work/USCT_repro/USCT_download/run_inversion_cbs_bridge.py:237:    dobs_500k/eval/train_6601.npy
+/home/featurize/work/USCT_repro/USCT_download/run_inversion_cbs_bridge.py:364:    num_src = transmitter_indices.shape[0]
+/home/featurize/work/USCT_repro/USCT_download/run_inversion_cbs_bridge.py:365:    num_rec = receiver_indices.shape[0]
+/home/featurize/work/USCT_repro/USCT_download/run_inversion_cbs_bridge.py:366:    if dobs_obs.shape[1] != num_src or dobs_obs.shape[2] != num_rec:
+/home/featurize/work/USCT_repro/USCT_download/run_inversion_cbs_bridge.py:369:            f"geometry ({num_src}, {num_rec})."
+/home/featurize/work/USCT_repro/USCT_download/run_inversion_cbs_bridge.py:407:            src_loc_set=transmitter_indices.cpu().numpy(),
+/home/featurize/work/USCT_repro/USCT_download/run_inversion_cbs_bridge.py:415:            rec_loc=receiver_indices.to(device),
+/home/featurize/work/USCT_repro/USCT_download/run_inversion_cbs_bridge.py:416:            dobs_500k_batch=dobs_obs,
+/home/featurize/work/USCT_repro/USCT_download/run_inversion_cbs_bridge.py:417:            dobs_500k_mask=receiver_mask,
+/home/featurize/work/USCT_repro/USCT_download/run_dds_smoke_test.py:38:        "frequency": "500k",
+/home/featurize/work/USCT_repro/USCT_download/run_dds_smoke_test.py:46:        file["base_dir_dobs_500k_train"] = str(dataset_root / "dobs_500k" / "train")
+/home/featurize/work/USCT_repro/USCT_download/run_dds_smoke_test.py:47:        file["base_dir_dobs_500k_eval"] = str(dataset_root / "dobs_500k" / "eval")
+/home/featurize/work/USCT_repro/USCT_download/run_dds_smoke_test.py:69:        file["base_dir_dobs_500k_train"] = str(dataset_root / "dobs_500k" / "train")
+/home/featurize/work/USCT_repro/USCT_download/run_dds_smoke_test.py:70:        file["base_dir_dobs_500k_eval"] = str(dataset_root / "dobs_500k" / "eval")
+/home/featurize/work/USCT_repro/USCT_download/run_dds_smoke_test.py:247:    downsampled_dobs_500k_batch = dobs_complex_all[args.noise_index:args.noise_index + 1]
+/home/featurize/work/USCT_repro/USCT_download/run_dds_smoke_test.py:249:    print("downsampled_dobs shape =", tuple(downsampled_dobs_500k_batch.shape))
+/home/featurize/work/USCT_repro/USCT_download/run_dds_smoke_test.py:307:                src_loc_set=file["transmitter_indices"],
+/home/featurize/work/USCT_repro/USCT_download/run_dds_smoke_test.py:313:                rec_loc=file["receiver_indices"],
+/home/featurize/work/USCT_repro/USCT_download/run_dds_smoke_test.py:314:                dobs_500k_batch=downsampled_input_batch,
+/home/featurize/work/USCT_repro/USCT_download/run_dds_smoke_test.py:315:                dobs_500k_mask=file["downsampled_input_mask"],
+/home/featurize/work/USCT_repro/USCT_download/run_dds_smoke_test.py:528:        downsampled_dobs_500k_batch,
+/home/featurize/work/USCT_repro/USCT_download/train_inversionnet_weighted.py:208:        "frequency": "500k",
+/home/featurize/work/USCT_repro/USCT_download/train_inversionnet_weighted.py:213:        "base_dir_dobs_500k_train": "Datasets_test/AI4Scup2_simulated_CBS_sparse/dobs_500k/train",
+/home/featurize/work/USCT_repro/USCT_download/train_inversionnet_weighted.py:214:        "base_dir_dobs_500k_eval": "Datasets_test/AI4Scup2_simulated_CBS_sparse/dobs_500k/eval",
+/home/featurize/work/USCT_repro/USCT_download/eval_gradient_consistency.py:116:    ap.add_argument("--frequency", type=float, default=500000.0)
+/home/featurize/work/USCT_repro/USCT_download/InversionNet_modules/default_args.py:13:        "frequency": "500k", # "500k"
+/home/featurize/work/USCT_repro/USCT_download/InversionNet_modules/default_args.py:19:        file["base_dir_dobs_500k_train"] = "/home/caoxiang/Desktop/Datasets/AI4Scup2_simulated_CBS_sparse/dobs_500k/train"
+/home/featurize/work/USCT_repro/USCT_download/InversionNet_modules/default_args.py:20:        file["base_dir_dobs_500k_eval"] = "/home/caoxiang/Desktop/Datasets/AI4Scup2_simulated_CBS_sparse/dobs_500k/eval"
+/home/featurize/work/USCT_repro/USCT_download/InversionNet_modules/default_args.py:34:        file["base_dir_dobs_500k_train"] = "/home/caoxiang/Desktop/Datasets/AI4Scup2_simulated_CBS_partial/dobs_500k/train"
+/home/featurize/work/USCT_repro/USCT_download/InversionNet_modules/default_args.py:35:        file["base_dir_dobs_500k_eval"] = "/home/caoxiang/Desktop/Datasets/AI4Scup2_simulated_CBS_partial/dobs_500k/eval"
+/home/featurize/work/USCT_repro/USCT_download/InversionNet_modules/default_args.py:63:    "frequency": "300k", # "300k", "400k", "500k"
+/home/featurize/work/USCT_repro/USCT_download/InversionNet_modules/default_args.py:68:    file["base_dir_dobs_500k_train"] = "/home/caoxiang/Desktop/Datasets/AI4Scup2_simulated/dobs_500k/train"
+/home/featurize/work/USCT_repro/USCT_download/InversionNet_modules/default_args.py:71:    file["base_dir_dobs_500k_eval"] = "/home/caoxiang/Desktop/Datasets/AI4Scup2_simulated/dobs_500k/eval"
+
+===== 6. EXISTING FORWARD CHECKPOINTS =====
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/clean_reverse_train20_val10_lf1_lg3/checkpoints/epoch_001.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/clean_reverse_train20_val10_lf1_lg3/checkpoints/epoch_002.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/clean_reverse_train20_val10_lf1_lg3/checkpoints/epoch_003.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/clean_reverse_train20_val10_lf1_lg3/checkpoints/epoch_004.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/clean_reverse_train20_val10_lf1_lg3/checkpoints/epoch_005.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/clean_reverse_train20_val10_lf1_lg3/checkpoints/epoch_006.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/clean_reverse_train20_val10_lf1_lg3/checkpoints/epoch_007.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/clean_reverse_train20_val10_lf1_lg3/checkpoints/epoch_008.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/clean_reverse_train20_val10_lf1_lg3/checkpoints/epoch_009.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/clean_reverse_train20_val10_lf1_lg3/checkpoints/epoch_010.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/clean_reverse_train20_val10_lf1_lg3/checkpoints/epoch_011.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/clean_reverse_train20_val10_lf1_lg3/checkpoints/epoch_012.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/clean_reverse_train20_val10_lf1_lg3/checkpoints/initial.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/clean_reverse_train20_val10_lf1_lg3/checkpoints/latest.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/offpath_combined_train20_val10_gradonly/checkpoints/best_gradcos.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/offpath_combined_train20_val10_gradonly/checkpoints/epoch_001.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/offpath_combined_train20_val10_gradonly/checkpoints/epoch_002.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/offpath_combined_train20_val10_gradonly/checkpoints/epoch_003.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/offpath_combined_train20_val10_gradonly/checkpoints/epoch_004.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/offpath_combined_train20_val10_gradonly/checkpoints/epoch_005.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/offpath_combined_train20_val10_gradonly/checkpoints/epoch_006.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/offpath_combined_train20_val10_gradonly/checkpoints/epoch_007.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/offpath_combined_train20_val10_gradonly/checkpoints/epoch_008.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/offpath_combined_train20_val10_gradonly/checkpoints/epoch_009.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/offpath_combined_train20_val10_gradonly/checkpoints/epoch_010.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/offpath_combined_train20_val10_gradonly/checkpoints/initial.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/offpath_combined_train20_val10_gradonly/checkpoints/latest.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/offpath_reverse_lf1_lg3/checkpoints/epoch_001.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/offpath_reverse_lf1_lg3/checkpoints/epoch_002.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/offpath_reverse_lf1_lg3/checkpoints/epoch_003.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/offpath_reverse_lf1_lg3/checkpoints/epoch_004.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/offpath_reverse_lf1_lg3/checkpoints/initial.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/offpath_reverse_lf1_lg3/checkpoints/latest.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/overfit1_raw_gradonly/checkpoints/best_gradcos.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/overfit1_raw_gradonly/checkpoints/initial.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/overfit1_raw_gradonly/checkpoints/latest.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/overfit1_smooth_continue80/checkpoints/best_gradcos.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/overfit1_smooth_continue80/checkpoints/initial.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/overfit1_smooth_continue80/checkpoints/latest.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/overfit1_smooth_gradonly/checkpoints/best_gradcos.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/overfit1_smooth_gradonly/checkpoints/initial.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/overfit1_smooth_gradonly/checkpoints/latest.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/raw_base10_lambda0p1/checkpoints/best_gradcos.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/raw_base10_lambda0p1/checkpoints/initial.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/raw_base10_lambda0p1/checkpoints/latest.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/reverse_mix_lf0p3_lg3/checkpoints/best_gradcos.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/reverse_mix_lf0p3_lg3/checkpoints/initial.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/reverse_mix_lf0p3_lg3/checkpoints/latest.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/reverse_mix_lf1_lg3/checkpoints/best_gradcos.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/reverse_mix_lf1_lg3/checkpoints/initial.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/reverse_mix_lf1_lg3/checkpoints/latest.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/smooth_base10_gradonly/checkpoints/best_gradcos.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/smooth_base10_gradonly/checkpoints/initial.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/smooth_base10_gradonly/checkpoints/latest.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/smooth_base10_mix_lg0p3/checkpoints/best_gradcos.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/smooth_base10_mix_lg0p3/checkpoints/initial.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/smooth_base10_mix_lg0p3/checkpoints/latest.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/smooth_base10_mix_lg1/checkpoints/best_gradcos.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/smooth_base10_mix_lg1/checkpoints/initial.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/smooth_base10_mix_lg1/checkpoints/latest.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/smooth_base10_mix_lg3/checkpoints/best_gradcos.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/smooth_base10_mix_lg3/checkpoints/initial.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/smooth_base10_mix_lg3/checkpoints/latest.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/smooth_train20_val10_gradonly/checkpoints/best_gradcos.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/smooth_train20_val10_gradonly/checkpoints/initial.pth
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_runs/smooth_train20_val10_gradonly/checkpoints/latest.pth
+/home/featurize/work/USCT_repro/USCT_download/dobs_matrix_residual_no_runs/local_alpha_residual_matrix_b32_240_train100_test20/checkpoints/best.pth
+/home/featurize/work/USCT_repro/USCT_download/dobs_matrix_residual_no_runs/local_alpha_residual_matrix_b32_240_train100_test20/checkpoints/latest.pth
+/home/featurize/work/USCT_repro/USCT_download/dobs_matrix_residual_pairwise_no_runs/local_alpha_pairwise_b32_delta2_train100_test20/checkpoints/best.pth
+/home/featurize/work/USCT_repro/USCT_download/dobs_matrix_residual_pairwise_no_runs/local_alpha_pairwise_b32_delta2_train100_test20/checkpoints/latest.pth
+/home/featurize/work/USCT_repro/USCT_download/final_forward_no_results/residual_matrix_b32_240_train300_test50/checkpoints/best.pth
+/home/featurize/work/USCT_repro/USCT_download/final_forward_no_results/residual_matrix_b32_240_train300_test50/checkpoints/latest.pth
+/home/featurize/work/USCT_repro/USCT_download/final_forward_no_results/residual_matrix_b32_240_train300_test50_dobsrrmse0p1335/checkpoints/best.pth
+/home/featurize/work/USCT_repro/USCT_download/final_forward_no_results/residual_matrix_b32_240_train300_test50_dobsrrmse0p1335/checkpoints/latest.pth
+/home/featurize/work/USCT_repro/USCT_download/final_forward_no_results/unet_no_b16_480_train50_test10_dobsrrmse0p1709/checkpoints/best.pth
+/home/featurize/work/USCT_repro/USCT_download/final_forward_no_results/unet_no_b16_480_train50_test10_dobsrrmse0p1709/checkpoints/latest.pth
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/local_alpha_residual_matrix_b32_240_train100_test20_dobsrrmse0p1388/checkpoints/best.pth
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/local_alpha_residual_matrix_b32_240_train100_test20_dobsrrmse0p1388/checkpoints/latest.pth
+
+===== 7. EXISTING CBS DATASETS =====
+/home/featurize/work/USCT_repro/USCT_download/2080Ti/ablation_runs/cbs_dobs_definition_check_v1
+/home/featurize/work/USCT_repro/USCT_download/2080Ti/ablation_runs/cbs_forward_alignment_sweep_v1
+/home/featurize/work/USCT_repro/USCT_download/2080Ti/ablation_runs/cbs_sanity_check_aligned_sample0
+/home/featurize/work/USCT_repro/USCT_download/2080Ti/ablation_runs/cbs_sanity_check_sample0
+/home/featurize/work/USCT_repro/USCT_download/2080Ti/ablation_runs/inversion_cbs_bridge_sample0
+/home/featurize/work/USCT_repro/USCT_download/2080Ti/ablation_runs/inversion_cbs_bridge_sweep_aligned_v1
+/home/featurize/work/USCT_repro/USCT_download/2080Ti/ablation_runs/inversion_cbs_bridge_sweep_aligned_v1/sample_000_step_0p5
+/home/featurize/work/USCT_repro/USCT_download/2080Ti/ablation_runs/inversion_cbs_bridge_sweep_aligned_v1/sample_000_step_1p0
+/home/featurize/work/USCT_repro/USCT_download/2080Ti/ablation_runs/inversion_cbs_bridge_sweep_aligned_v1/sample_000_step_2p0
+/home/featurize/work/USCT_repro/USCT_download/2080Ti/ablation_runs/inversion_cbs_bridge_sweep_aligned_v1/sample_000_step_5p0
+/home/featurize/work/USCT_repro/USCT_download/2080Ti/ablation_runs/inversion_cbs_bridge_sweep_aligned_v1/sample_001_step_0p5
+/home/featurize/work/USCT_repro/USCT_download/2080Ti/ablation_runs/inversion_cbs_bridge_sweep_aligned_v1/sample_001_step_1p0
+/home/featurize/work/USCT_repro/USCT_download/2080Ti/ablation_runs/inversion_cbs_bridge_sweep_aligned_v1/sample_001_step_2p0
+/home/featurize/work/USCT_repro/USCT_download/2080Ti/ablation_runs/inversion_cbs_bridge_sweep_aligned_v1/sample_001_step_5p0
+/home/featurize/work/USCT_repro/USCT_download/2080Ti/ablation_runs/inversion_cbs_bridge_sweep_aligned_v1/sample_002_step_0p5
+/home/featurize/work/USCT_repro/USCT_download/2080Ti/ablation_runs/inversion_cbs_bridge_sweep_aligned_v1/sample_002_step_1p0
+/home/featurize/work/USCT_repro/USCT_download/2080Ti/ablation_runs/inversion_cbs_bridge_sweep_aligned_v1/sample_002_step_2p0
+/home/featurize/work/USCT_repro/USCT_download/2080Ti/ablation_runs/inversion_cbs_bridge_sweep_aligned_v1/sample_002_step_5p0
+/home/featurize/work/USCT_repro/USCT_download/2080Ti/ablation_runs/inversion_cbs_bridge_sweep_v1
+/home/featurize/work/USCT_repro/USCT_download/2080Ti/ablation_runs/inversion_cbs_bridge_sweep_v1/sample_000_step_10p0
+/home/featurize/work/USCT_repro/USCT_download/2080Ti/ablation_runs/inversion_cbs_bridge_sweep_v1/sample_000_step_20p0
+/home/featurize/work/USCT_repro/USCT_download/2080Ti/ablation_runs/inversion_cbs_bridge_sweep_v1/sample_000_step_50p0
+/home/featurize/work/USCT_repro/USCT_download/2080Ti/ablation_runs/inversion_cbs_bridge_sweep_v1/sample_000_step_5p0
+/home/featurize/work/USCT_repro/USCT_download/2080Ti/ablation_runs/inversion_cbs_bridge_sweep_v1/sample_001_step_10p0
+/home/featurize/work/USCT_repro/USCT_download/2080Ti/ablation_runs/inversion_cbs_bridge_sweep_v1/sample_001_step_20p0
+/home/featurize/work/USCT_repro/USCT_download/2080Ti/ablation_runs/inversion_cbs_bridge_sweep_v1/sample_001_step_50p0
+/home/featurize/work/USCT_repro/USCT_download/2080Ti/ablation_runs/inversion_cbs_bridge_sweep_v1/sample_001_step_5p0
+/home/featurize/work/USCT_repro/USCT_download/2080Ti/ablation_runs/inversion_cbs_bridge_sweep_v1/sample_002_step_10p0
+/home/featurize/work/USCT_repro/USCT_download/2080Ti/ablation_runs/inversion_cbs_bridge_sweep_v1/sample_002_step_20p0
+/home/featurize/work/USCT_repro/USCT_download/2080Ti/ablation_runs/inversion_cbs_bridge_sweep_v1/sample_002_step_50p0
+/home/featurize/work/USCT_repro/USCT_download/2080Ti/ablation_runs/inversion_cbs_bridge_sweep_v1/sample_002_step_5p0
+/home/featurize/work/USCT_repro/USCT_download/2080Ti/ablation_runs/inversionnet_cbs_aligned_b32
+/home/featurize/work/USCT_repro/USCT_download/2080Ti/ablation_runs/inversionnet_cbs_aligned_b32/checkpoints
+/home/featurize/work/USCT_repro/USCT_download/2080Ti/ablation_runs/inversionnet_cbs_aligned_b32/visuals
+/home/featurize/work/USCT_repro/USCT_download/Datasets_test/AI4Scup2_simulated_CBS_partial
+/home/featurize/work/USCT_repro/USCT_download/Datasets_test/AI4Scup2_simulated_CBS_partial/dobs_300k
+/home/featurize/work/USCT_repro/USCT_download/Datasets_test/AI4Scup2_simulated_CBS_partial/dobs_300k/eval
+/home/featurize/work/USCT_repro/USCT_download/Datasets_test/AI4Scup2_simulated_CBS_partial/dobs_300k/train
+/home/featurize/work/USCT_repro/USCT_download/Datasets_test/AI4Scup2_simulated_CBS_partial/dobs_400k
+/home/featurize/work/USCT_repro/USCT_download/Datasets_test/AI4Scup2_simulated_CBS_partial/dobs_400k/eval
+/home/featurize/work/USCT_repro/USCT_download/Datasets_test/AI4Scup2_simulated_CBS_partial/dobs_400k/train
+/home/featurize/work/USCT_repro/USCT_download/Datasets_test/AI4Scup2_simulated_CBS_partial/dobs_500k
+/home/featurize/work/USCT_repro/USCT_download/Datasets_test/AI4Scup2_simulated_CBS_partial/dobs_500k/eval
+/home/featurize/work/USCT_repro/USCT_download/Datasets_test/AI4Scup2_simulated_CBS_partial/dobs_500k/train
+/home/featurize/work/USCT_repro/USCT_download/Datasets_test/AI4Scup2_simulated_CBS_partial/speed
+/home/featurize/work/USCT_repro/USCT_download/Datasets_test/AI4Scup2_simulated_CBS_partial/speed/eval
+/home/featurize/work/USCT_repro/USCT_download/Datasets_test/AI4Scup2_simulated_CBS_partial/speed/train
+/home/featurize/work/USCT_repro/USCT_download/Datasets_test/AI4Scup2_simulated_CBS_sparse
+/home/featurize/work/USCT_repro/USCT_download/Datasets_test/AI4Scup2_simulated_CBS_sparse/dobs_300k
+/home/featurize/work/USCT_repro/USCT_download/Datasets_test/AI4Scup2_simulated_CBS_sparse/dobs_300k/eval
+/home/featurize/work/USCT_repro/USCT_download/Datasets_test/AI4Scup2_simulated_CBS_sparse/dobs_300k/train
+/home/featurize/work/USCT_repro/USCT_download/Datasets_test/AI4Scup2_simulated_CBS_sparse/dobs_400k
+/home/featurize/work/USCT_repro/USCT_download/Datasets_test/AI4Scup2_simulated_CBS_sparse/dobs_400k/eval
+/home/featurize/work/USCT_repro/USCT_download/Datasets_test/AI4Scup2_simulated_CBS_sparse/dobs_400k/train
+/home/featurize/work/USCT_repro/USCT_download/Datasets_test/AI4Scup2_simulated_CBS_sparse/dobs_500k
+/home/featurize/work/USCT_repro/USCT_download/Datasets_test/AI4Scup2_simulated_CBS_sparse/dobs_500k/eval
+/home/featurize/work/USCT_repro/USCT_download/Datasets_test/AI4Scup2_simulated_CBS_sparse/dobs_500k/train
+/home/featurize/work/USCT_repro/USCT_download/Datasets_test/AI4Scup2_simulated_CBS_sparse/speed
+/home/featurize/work/USCT_repro/USCT_download/Datasets_test/AI4Scup2_simulated_CBS_sparse/speed/eval
+/home/featurize/work/USCT_repro/USCT_download/Datasets_test/AI4Scup2_simulated_CBS_sparse/speed/train
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_multistep_runs/full_cbs_matched_test20
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_multistep_runs/full_cbs_matched_test20/test_1
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_multistep_runs/full_cbs_matched_test20/test_10
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_multistep_runs/full_cbs_matched_test20/test_11
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_multistep_runs/full_cbs_matched_test20/test_12
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_multistep_runs/full_cbs_matched_test20/test_13
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_multistep_runs/full_cbs_matched_test20/test_14
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_multistep_runs/full_cbs_matched_test20/test_15
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_multistep_runs/full_cbs_matched_test20/test_16
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_multistep_runs/full_cbs_matched_test20/test_17
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_multistep_runs/full_cbs_matched_test20/test_18
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_multistep_runs/full_cbs_matched_test20/test_19
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_multistep_runs/full_cbs_matched_test20/test_2
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_multistep_runs/full_cbs_matched_test20/test_20
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_multistep_runs/full_cbs_matched_test20/test_3
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_multistep_runs/full_cbs_matched_test20/test_4
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_multistep_runs/full_cbs_matched_test20/test_5
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_multistep_runs/full_cbs_matched_test20/test_6
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_multistep_runs/full_cbs_matched_test20/test_7
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_multistep_runs/full_cbs_matched_test20/test_8
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_multistep_runs/full_cbs_matched_test20/test_9
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_multistep_runs/full_cbs_matched_test5
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_multistep_runs/full_cbs_matched_test5/test_1
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_multistep_runs/full_cbs_matched_test5/test_2
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_multistep_runs/full_cbs_matched_test5/test_3
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_multistep_runs/full_cbs_matched_test5/test_4
+/home/featurize/work/USCT_repro/USCT_download/adjoint_aware_multistep_runs/full_cbs_matched_test5/test_5
+/home/featurize/work/USCT_repro/USCT_download/adjoint_teacher_cache
+/home/featurize/work/USCT_repro/USCT_download/adjoint_teacher_cache/combined_train1_20
+/home/featurize/work/USCT_repro/USCT_download/adjoint_teacher_cache/combined_val21_30
+/home/featurize/work/USCT_repro/USCT_download/adjoint_teacher_cache/offpath_train1_20
+/home/featurize/work/USCT_repro/USCT_download/adjoint_teacher_cache/offpath_val21_30
+/home/featurize/work/USCT_repro/USCT_download/adjoint_teacher_cache/test_base3
+/home/featurize/work/USCT_repro/USCT_download/adjoint_teacher_cache/train_base10
+/home/featurize/work/USCT_repro/USCT_download/adjoint_teacher_cache/train_base1_20
+/home/featurize/work/USCT_repro/USCT_download/adjoint_teacher_cache/val_base21_30
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/local_alpha01
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/local_alpha01/test
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/local_alpha01/train
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/results/full_cbs
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/results/full_cbs/test_21
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/results/full_cbs/test_22
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/results/full_cbs/test_23
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/results/full_cbs/test_24
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/results/full_cbs/test_25
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/results/full_cbs/test_26
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/results/full_cbs/test_27
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/results/full_cbs/test_28
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/results/full_cbs/test_29
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/results/full_cbs/test_30
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/results/full_cbs/test_31
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/results/full_cbs/test_32
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/results/full_cbs/test_33
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/results/full_cbs/test_34
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/results/full_cbs/test_35
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/results/full_cbs/test_36
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/results/full_cbs/test_37
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/results/full_cbs/test_38
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/results/full_cbs/test_39
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/results/full_cbs/test_40
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/results/full_cbs/test_41
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/results/full_cbs/test_42
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/results/full_cbs/test_43
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/results/full_cbs/test_44
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/results/full_cbs/test_45
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/results/full_cbs/test_46
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/results/full_cbs/test_47
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/results/full_cbs/test_48
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/results/full_cbs/test_49
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/results/full_cbs/test_50
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/results/g3_ensemble_cbs_guard_frozen
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/results/g3_ensemble_cbs_guard_frozen/ensemble_predictions
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/results/g3_ensemble_cbs_guard_frozen/forward_cache
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/results/g3_ensemble_cbs_guard_frozen/guarded_predictions
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/self_cbs
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/self_cbs/test
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/self_cbs/train
+/home/featurize/work/USCT_repro/USCT_download/dobs_matrix_residual_no_runs/local_alpha_residual_matrix_b32_240_train100_test20
+/home/featurize/work/USCT_repro/USCT_download/dobs_matrix_residual_no_runs/local_alpha_residual_matrix_b32_240_train100_test20/checkpoints
+/home/featurize/work/USCT_repro/USCT_download/dobs_matrix_residual_no_runs/local_alpha_residual_matrix_b32_240_train100_test20/eval_full_test
+/home/featurize/work/USCT_repro/USCT_download/dobs_matrix_residual_pairwise_no_runs/local_alpha_pairwise_b32_delta2_train100_test20
+/home/featurize/work/USCT_repro/USCT_download/dobs_matrix_residual_pairwise_no_runs/local_alpha_pairwise_b32_delta2_train100_test20/checkpoints
+/home/featurize/work/USCT_repro/USCT_download/dobs_matrix_residual_pairwise_no_runs/local_alpha_pairwise_b32_delta2_train100_test20/eval_full_test
+/home/featurize/work/USCT_repro/USCT_download/dobs_mean_baseline/local_alpha_train100_test20
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_1
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_10
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_11
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_12
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_13
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_14
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_15
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_16
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_17
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_18
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_19
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_2
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_20
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_21
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_22
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_23
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_24
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_25
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_26
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_27
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_28
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_29
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_3
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_30
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_31
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_32
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_33
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_34
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_35
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_36
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_37
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_38
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_39
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_4
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_40
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_41
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_42
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_43
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_44
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_45
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_46
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_47
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_48
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_49
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_5
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_50
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_6
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_7
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_8
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/cbs_correction_backtracking_tether0p1/test_9
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_1
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_10
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_11
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_12
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_13
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_14
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_15
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_16
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_17
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_18
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_19
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_2
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_20
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_21
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_22
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_23
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_24
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_25
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_26
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_27
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_28
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_29
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_3
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_30
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_31
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_32
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_33
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_34
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_35
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_36
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_37
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_38
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_39
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_4
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_40
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_41
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_42
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_43
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_44
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_45
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_46
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_47
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_48
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_49
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_5
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_50
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_6
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_7
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_8
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/cbs_correction_sparse64_test50_backtracking_tether0p1/test_9
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/hybrid_neural_proposal_cbs_validated_test1_no_tether_best
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/hybrid_neural_proposal_cbs_validated_test1_small_improve
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/local_alpha_direct_neural_correction_failed
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/local_alpha_hybrid_batch_test10_weak_positive
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/local_alpha_hybrid_batch_test10_weak_positive/test_1
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/local_alpha_hybrid_batch_test10_weak_positive/test_10
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/local_alpha_hybrid_batch_test10_weak_positive/test_2
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/local_alpha_hybrid_batch_test10_weak_positive/test_3
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/local_alpha_hybrid_batch_test10_weak_positive/test_4
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/local_alpha_hybrid_batch_test10_weak_positive/test_5
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/local_alpha_hybrid_batch_test10_weak_positive/test_6
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/local_alpha_hybrid_batch_test10_weak_positive/test_7
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/local_alpha_hybrid_batch_test10_weak_positive/test_8
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/local_alpha_hybrid_batch_test10_weak_positive/test_9
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/local_alpha_residual_matrix_b32_240_train100_test20_dobsrrmse0p1388
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/local_alpha_residual_matrix_b32_240_train100_test20_dobsrrmse0p1388/checkpoints
+/home/featurize/work/USCT_repro/USCT_download/final_milestones/local_alpha_residual_matrix_b32_240_train100_test20_dobsrrmse0p1388/eval_full_test
+/home/featurize/work/USCT_repro/USCT_download/generative_runs/hybrid_g3_true_cbs_val20
+/home/featurize/work/USCT_repro/USCT_download/generative_runs/hybrid_g3_true_cbs_val20/forward_cache
+/home/featurize/work/USCT_repro/USCT_download/generative_runs/hybrid_g3_true_cbs_val20/guarded_predictions
+/home/featurize/work/USCT_repro/USCT_download/hybrid_correction_runs/local_alpha_batch_test10_no_tether_fine_step
+/home/featurize/work/USCT_repro/USCT_download/hybrid_correction_runs/local_alpha_batch_test10_no_tether_fine_step/test_1
+/home/featurize/work/USCT_repro/USCT_download/hybrid_correction_runs/local_alpha_batch_test10_no_tether_fine_step/test_10
+/home/featurize/work/USCT_repro/USCT_download/hybrid_correction_runs/local_alpha_batch_test10_no_tether_fine_step/test_2
+/home/featurize/work/USCT_repro/USCT_download/hybrid_correction_runs/local_alpha_batch_test10_no_tether_fine_step/test_3
+/home/featurize/work/USCT_repro/USCT_download/hybrid_correction_runs/local_alpha_batch_test10_no_tether_fine_step/test_4
+/home/featurize/work/USCT_repro/USCT_download/hybrid_correction_runs/local_alpha_batch_test10_no_tether_fine_step/test_5
+/home/featurize/work/USCT_repro/USCT_download/hybrid_correction_runs/local_alpha_batch_test10_no_tether_fine_step/test_6
+/home/featurize/work/USCT_repro/USCT_download/hybrid_correction_runs/local_alpha_batch_test10_no_tether_fine_step/test_7
+/home/featurize/work/USCT_repro/USCT_download/hybrid_correction_runs/local_alpha_batch_test10_no_tether_fine_step/test_8
+/home/featurize/work/USCT_repro/USCT_download/hybrid_correction_runs/local_alpha_batch_test10_no_tether_fine_step/test_9
+/home/featurize/work/USCT_repro/USCT_download/hybrid_correction_runs/neural_proposal_cbs_validated_test1_debug
+/home/featurize/work/USCT_repro/USCT_download/hybrid_correction_runs/neural_proposal_cbs_validated_test1_fine_step
+/home/featurize/work/USCT_repro/USCT_download/hybrid_correction_runs/neural_proposal_cbs_validated_test1_no_tether
+/home/featurize/work/USCT_repro/USCT_download/neural_correction_runs/local_alpha_residual_test1_direct
+/home/featurize/work/USCT_repro/USCT_download/results_test_cbs_pipeline
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/check_train_1
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/condition_residual_test
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/condition_residual_test_fixedT
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/condition_residual_train
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/condition_residual_train_fixedT
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/physics_correction_test1_backtracking
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/physics_correction_test1_backtracking_tether
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/physics_correction_test1_step1
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/test
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/train
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_dobs_train300_test50
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_dobs_train300_test50/cbs_correction_backtracking_tether0p1
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_dobs_train300_test50/cbs_correction_backtracking_tether0p1/test_1
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_dobs_train300_test50/cbs_correction_backtracking_tether0p1/test_10
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_dobs_train300_test50/cbs_correction_backtracking_tether0p1/test_11
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_dobs_train300_test50/cbs_correction_backtracking_tether0p1/test_12
+
+===== 8. C4 FROZEN CHECKPOINT =====
+lrwxrwxrwx 1 featurize featurize 114 Sep  3 15:30 /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/checkpoints/c3_cm_best_ema25k.pt -> /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/experiments/c3_cm_c256_e50k_v1/ema_0.9999_025000.pt
+lrwxrwxrwx 1 featurize featurize 108 Sep  4 05:02 /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/checkpoints/c4_cc_oof897_best_5k.pt -> /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/experiments/c4_cc_oof897_5k_v1/model005000.pt
+
+[PASS] C5 preflight complete

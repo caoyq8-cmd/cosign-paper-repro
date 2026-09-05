@@ -1,0 +1,34 @@
+
+================================================================================
+sigma = 80.0
+correct vs zero: mean_abs_norm=7.00514574e-05, mean_abs_mps=0.007180, max_abs_mps=0.144017
+correct vs shuffled: mean_abs_norm=6.42740561e-05, mean_abs_mps=0.006588, max_abs_mps=0.220737
+correct   norm_MSE=0.00998457
+zero      norm_MSE=0.00999480
+shuffled  norm_MSE=0.00999490
+
+================================================================================
+sigma = 10.0
+correct vs zero: mean_abs_norm=5.09492587e-04, mean_abs_mps=0.052223, max_abs_mps=1.214481
+correct vs shuffled: mean_abs_norm=4.49413259e-04, mean_abs_mps=0.046065, max_abs_mps=1.571716
+correct   norm_MSE=0.00982868
+zero      norm_MSE=0.00988556
+shuffled  norm_MSE=0.00989586
+
+================================================================================
+sigma = 1.0
+correct vs zero: mean_abs_norm=1.16382807e-03, mean_abs_mps=0.119292, max_abs_mps=3.510151
+correct vs shuffled: mean_abs_norm=8.70309188e-04, mean_abs_mps=0.089207, max_abs_mps=5.256630
+correct   norm_MSE=0.00343507
+zero      norm_MSE=0.00347033
+shuffled  norm_MSE=0.00346520
+
+================================================================================
+sigma = 0.1
+correct vs zero: mean_abs_norm=4.28880943e-04, mean_abs_mps=0.043960, max_abs_mps=1.130670
+correct vs shuffled: mean_abs_norm=2.83389352e-04, mean_abs_mps=0.029047, max_abs_mps=2.418783
+correct   norm_MSE=0.00049577
+zero      norm_MSE=0.00049349
+shuffled  norm_MSE=0.00049669
+
+[PASS] multisigma output sensitivity complete

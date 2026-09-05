@@ -1,0 +1,1231 @@
+Logging to /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/experiments/c4_cc_oof897_5k_v1
+===== C4 USCT Conditional CM =====
+gt_npy   = /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/data/full_train_gt_norm.npy
+hint_npy = /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/data/full_train_cond_norm.npy
+unet     = /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/checkpoints/c3_cm_best_ema25k.pt
+steps    = 5000
+batch    = 1
+loss     = recon/l2
+creating ControlNet / ControlledUnet / diffusion...
+loading C3 backbone from /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/checkpoints/c3_cm_best_ema25k.pt
+ControlNet init: missing=40, unexpected=324
+creating paired GT/OOF-hint loader...
+preflight GT   shape=(1, 1, 256, 256) range=(-0.669319,0.470126)
+preflight hint shape=(1, 1, 256, 256) range=(-0.667983,0.203058)
+training...
+save_mode = raw
+----------------------------
+| grad_norm     | 0.0305   |
+| lg_loss_scale | 20       |
+| loss          | 0.0309   |
+| loss_q0       | 0.0351   |
+| loss_q1       | 0.0334   |
+| loss_q2       | 0.0271   |
+| loss_q3       | 0.0254   |
+| param_norm    | 214      |
+| samples       | 51       |
+| step          | 50       |
+----------------------------
+----------------------------
+| grad_norm     | 0.0296   |
+| lg_loss_scale | 20.1     |
+| loss          | 0.027    |
+| loss_q0       | 0.0285   |
+| loss_q1       | 0.0316   |
+| loss_q2       | 0.034    |
+| loss_q3       | 0.0173   |
+| param_norm    | 214      |
+| samples       | 101      |
+| step          | 100      |
+----------------------------
+----------------------------
+| grad_norm     | 0.0329   |
+| lg_loss_scale | 20.1     |
+| loss          | 0.0267   |
+| loss_q0       | 0.0302   |
+| loss_q1       | 0.0327   |
+| loss_q2       | 0.0197   |
+| loss_q3       | 0.022    |
+| param_norm    | 214      |
+| samples       | 151      |
+| step          | 150      |
+----------------------------
+----------------------------
+| grad_norm     | 0.0346   |
+| lg_loss_scale | 20.2     |
+| loss          | 0.0216   |
+| loss_q0       | 0.0197   |
+| loss_q1       | 0.0336   |
+| loss_q2       | 0.0215   |
+| loss_q3       | 0.0165   |
+| param_norm    | 214      |
+| samples       | 201      |
+| step          | 200      |
+----------------------------
+----------------------------
+| grad_norm     | 0.031    |
+| lg_loss_scale | 20.2     |
+| loss          | 0.0202   |
+| loss_q0       | 0.0163   |
+| loss_q1       | 0.0273   |
+| loss_q2       | 0.0213   |
+| loss_q3       | 0.0185   |
+| param_norm    | 214      |
+| samples       | 251      |
+| step          | 250      |
+----------------------------
+----------------------------
+| grad_norm     | 0.0278   |
+| lg_loss_scale | 20.3     |
+| loss          | 0.0162   |
+| loss_q0       | 0.0083   |
+| loss_q1       | 0.00996  |
+| loss_q2       | 0.0207   |
+| loss_q3       | 0.0213   |
+| param_norm    | 214      |
+| samples       | 301      |
+| step          | 300      |
+----------------------------
+----------------------------
+| grad_norm     | 0.0432   |
+| lg_loss_scale | 20.3     |
+| loss          | 0.022    |
+| loss_q0       | 0.0231   |
+| loss_q1       | 0.0185   |
+| loss_q2       | 0.0229   |
+| loss_q3       | 0.0251   |
+| param_norm    | 214      |
+| samples       | 351      |
+| step          | 350      |
+----------------------------
+----------------------------
+| grad_norm     | 0.0272   |
+| lg_loss_scale | 20.4     |
+| loss          | 0.0176   |
+| loss_q0       | 0.012    |
+| loss_q1       | 0.02     |
+| loss_q2       | 0.0184   |
+| loss_q3       | 0.0196   |
+| param_norm    | 214      |
+| samples       | 401      |
+| step          | 400      |
+----------------------------
+----------------------------
+| grad_norm     | 0.0328   |
+| lg_loss_scale | 20.4     |
+| loss          | 0.0194   |
+| loss_q0       | 0.0131   |
+| loss_q1       | 0.0245   |
+| loss_q2       | 0.00849  |
+| loss_q3       | 0.0256   |
+| param_norm    | 214      |
+| samples       | 451      |
+| step          | 450      |
+----------------------------
+----------------------------
+| grad_norm     | 0.0422   |
+| lg_loss_scale | 20.5     |
+| loss          | 0.0215   |
+| loss_q0       | 0.0317   |
+| loss_q1       | 0.0176   |
+| loss_q2       | 0.0136   |
+| loss_q3       | 0.0231   |
+| param_norm    | 214      |
+| samples       | 501      |
+| step          | 500      |
+----------------------------
+saving RAW-ONLY checkpoint to /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/experiments/c4_cc_oof897_5k_v1/model000500.pt
+----------------------------
+| grad_norm     | 0.0343   |
+| lg_loss_scale | 20.5     |
+| loss          | 0.0163   |
+| loss_q0       | 0.0222   |
+| loss_q1       | 0.0203   |
+| loss_q2       | 0.00648  |
+| loss_q3       | 0.0176   |
+| param_norm    | 214      |
+| samples       | 551      |
+| step          | 550      |
+----------------------------
+----------------------------
+| grad_norm     | 0.0319   |
+| lg_loss_scale | 20.6     |
+| loss          | 0.0154   |
+| loss_q0       | 0.0109   |
+| loss_q1       | 0.0173   |
+| loss_q2       | 0.0179   |
+| loss_q3       | 0.0175   |
+| param_norm    | 214      |
+| samples       | 601      |
+| step          | 600      |
+----------------------------
+----------------------------
+| grad_norm     | 0.0373   |
+| lg_loss_scale | 20.6     |
+| loss          | 0.0176   |
+| loss_q0       | 0.0179   |
+| loss_q1       | 0.0231   |
+| loss_q2       | 0.0146   |
+| loss_q3       | 0.01     |
+| param_norm    | 214      |
+| samples       | 651      |
+| step          | 650      |
+----------------------------
+----------------------------
+| grad_norm     | 0.0316   |
+| lg_loss_scale | 20.7     |
+| loss          | 0.0137   |
+| loss_q0       | 0.0113   |
+| loss_q1       | 0.0195   |
+| loss_q2       | 0.0105   |
+| loss_q3       | 0.0146   |
+| param_norm    | 214      |
+| samples       | 701      |
+| step          | 700      |
+----------------------------
+----------------------------
+| grad_norm     | 0.0234   |
+| lg_loss_scale | 20.7     |
+| loss          | 0.0122   |
+| loss_q0       | 0.00964  |
+| loss_q1       | 0.017    |
+| loss_q2       | 0.00778  |
+| loss_q3       | 0.0135   |
+| param_norm    | 214      |
+| samples       | 751      |
+| step          | 750      |
+----------------------------
+----------------------------
+| grad_norm     | 0.0275   |
+| lg_loss_scale | 20.8     |
+| loss          | 0.0143   |
+| loss_q0       | 0.00735  |
+| loss_q1       | 0.0126   |
+| loss_q2       | 0.023    |
+| loss_q3       | 0.0112   |
+| param_norm    | 214      |
+| samples       | 801      |
+| step          | 800      |
+----------------------------
+----------------------------
+| grad_norm     | 0.027    |
+| lg_loss_scale | 20.8     |
+| loss          | 0.0166   |
+| loss_q0       | 0.0233   |
+| loss_q1       | 0.0107   |
+| loss_q2       | 0.0231   |
+| loss_q3       | 0.00891  |
+| param_norm    | 214      |
+| samples       | 851      |
+| step          | 850      |
+----------------------------
+----------------------------
+| grad_norm     | 0.0306   |
+| lg_loss_scale | 20.9     |
+| loss          | 0.0143   |
+| loss_q0       | 0.0147   |
+| loss_q1       | 0.00587  |
+| loss_q2       | 0.0141   |
+| loss_q3       | 0.0229   |
+| param_norm    | 214      |
+| samples       | 901      |
+| step          | 900      |
+----------------------------
+----------------------------
+| grad_norm     | 0.0396   |
+| lg_loss_scale | 20.9     |
+| loss          | 0.0154   |
+| loss_q0       | 0.00824  |
+| loss_q1       | 0.013    |
+| loss_q2       | 0.0197   |
+| loss_q3       | 0.0209   |
+| param_norm    | 214      |
+| samples       | 951      |
+| step          | 950      |
+----------------------------
+----------------------------
+| grad_norm     | 0.0299   |
+| lg_loss_scale | 21       |
+| loss          | 0.0156   |
+| loss_q0       | 0.0141   |
+| loss_q1       | 0.0138   |
+| loss_q2       | 0.0171   |
+| loss_q3       | 0.0193   |
+| param_norm    | 214      |
+| samples       | 1e+03    |
+| step          | 1e+03    |
+----------------------------
+saving RAW-ONLY checkpoint to /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/experiments/c4_cc_oof897_5k_v1/model001000.pt
+----------------------------
+| grad_norm     | 0.0351   |
+| lg_loss_scale | 21       |
+| loss          | 0.0171   |
+| loss_q0       | 0.016    |
+| loss_q1       | 0.0159   |
+| loss_q2       | 0.0196   |
+| loss_q3       | 0.0165   |
+| param_norm    | 214      |
+| samples       | 1.05e+03 |
+| step          | 1.05e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.0333   |
+| lg_loss_scale | 21.1     |
+| loss          | 0.0191   |
+| loss_q0       | 0.0236   |
+| loss_q1       | 0.0144   |
+| loss_q2       | 0.0206   |
+| loss_q3       | 0.0185   |
+| param_norm    | 214      |
+| samples       | 1.1e+03  |
+| step          | 1.1e+03  |
+----------------------------
+----------------------------
+| grad_norm     | 0.0225   |
+| lg_loss_scale | 21.1     |
+| loss          | 0.0146   |
+| loss_q0       | 0.0103   |
+| loss_q1       | 0.0151   |
+| loss_q2       | 0.0171   |
+| loss_q3       | 0.0152   |
+| param_norm    | 214      |
+| samples       | 1.15e+03 |
+| step          | 1.15e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.0335   |
+| lg_loss_scale | 21.2     |
+| loss          | 0.0165   |
+| loss_q0       | 0.0126   |
+| loss_q1       | 0.0222   |
+| loss_q2       | 0.0132   |
+| loss_q3       | 0.0207   |
+| param_norm    | 214      |
+| samples       | 1.2e+03  |
+| step          | 1.2e+03  |
+----------------------------
+----------------------------
+| grad_norm     | 0.0534   |
+| lg_loss_scale | 21.2     |
+| loss          | 0.0155   |
+| loss_q0       | 0.0146   |
+| loss_q1       | 0.0141   |
+| loss_q2       | 0.0176   |
+| loss_q3       | 0.0164   |
+| param_norm    | 214      |
+| samples       | 1.25e+03 |
+| step          | 1.25e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.0632   |
+| lg_loss_scale | 21.3     |
+| loss          | 0.0174   |
+| loss_q0       | 0.0125   |
+| loss_q1       | 0.0179   |
+| loss_q2       | 0.0243   |
+| loss_q3       | 0.0172   |
+| param_norm    | 214      |
+| samples       | 1.3e+03  |
+| step          | 1.3e+03  |
+----------------------------
+----------------------------
+| grad_norm     | 0.0442   |
+| lg_loss_scale | 21.3     |
+| loss          | 0.0123   |
+| loss_q0       | 0.0154   |
+| loss_q1       | 0.00481  |
+| loss_q2       | 0.0118   |
+| loss_q3       | 0.0146   |
+| param_norm    | 214      |
+| samples       | 1.35e+03 |
+| step          | 1.35e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.0577   |
+| lg_loss_scale | 21.4     |
+| loss          | 0.0128   |
+| loss_q0       | 0.0145   |
+| loss_q1       | 0.0126   |
+| loss_q2       | 0.0127   |
+| loss_q3       | 0.0115   |
+| param_norm    | 214      |
+| samples       | 1.4e+03  |
+| step          | 1.4e+03  |
+----------------------------
+----------------------------
+| grad_norm     | 0.072    |
+| lg_loss_scale | 21.4     |
+| loss          | 0.0143   |
+| loss_q0       | 0.0104   |
+| loss_q1       | 0.021    |
+| loss_q2       | 0.0128   |
+| loss_q3       | 0.0164   |
+| param_norm    | 214      |
+| samples       | 1.45e+03 |
+| step          | 1.45e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.0382   |
+| lg_loss_scale | 21.5     |
+| loss          | 0.0106   |
+| loss_q0       | 0.0183   |
+| loss_q1       | 0.0149   |
+| loss_q2       | 0.00799  |
+| loss_q3       | 0.00289  |
+| param_norm    | 214      |
+| samples       | 1.5e+03  |
+| step          | 1.5e+03  |
+----------------------------
+saving RAW-ONLY checkpoint to /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/experiments/c4_cc_oof897_5k_v1/model001500.pt
+Found NaN, decreased lg_loss_scale to 20.53800000000188
+----------------------------
+| grad_norm     | 0.0601   |
+| lg_loss_scale | 21.3     |
+| loss          | 0.0142   |
+| loss_q0       | 0.0159   |
+| loss_q1       | 0.00922  |
+| loss_q2       | 0.0112   |
+| loss_q3       | 0.0235   |
+| param_norm    | 214      |
+| samples       | 1.55e+03 |
+| step          | 1.55e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.0616   |
+| lg_loss_scale | 20.6     |
+| loss          | 0.0158   |
+| loss_q0       | 0.023    |
+| loss_q1       | 0.0159   |
+| loss_q2       | 0.0126   |
+| loss_q3       | 0.00958  |
+| param_norm    | 214      |
+| samples       | 1.6e+03  |
+| step          | 1.6e+03  |
+----------------------------
+----------------------------
+| grad_norm     | 0.0478   |
+| lg_loss_scale | 20.6     |
+| loss          | 0.0134   |
+| loss_q0       | 0.0103   |
+| loss_q1       | 0.0147   |
+| loss_q2       | 0.0143   |
+| loss_q3       | 0.0145   |
+| param_norm    | 214      |
+| samples       | 1.65e+03 |
+| step          | 1.65e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.0568   |
+| lg_loss_scale | 20.7     |
+| loss          | 0.0138   |
+| loss_q0       | 0.0136   |
+| loss_q1       | 0.0141   |
+| loss_q2       | 0.0111   |
+| loss_q3       | 0.0149   |
+| param_norm    | 214      |
+| samples       | 1.7e+03  |
+| step          | 1.7e+03  |
+----------------------------
+----------------------------
+| grad_norm     | 0.0475   |
+| lg_loss_scale | 20.7     |
+| loss          | 0.00999  |
+| loss_q0       | 0.0083   |
+| loss_q1       | 0.00854  |
+| loss_q2       | 0.0136   |
+| loss_q3       | 0.0103   |
+| param_norm    | 214      |
+| samples       | 1.75e+03 |
+| step          | 1.75e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.0708   |
+| lg_loss_scale | 20.8     |
+| loss          | 0.0135   |
+| loss_q0       | 0.0105   |
+| loss_q1       | 0.0217   |
+| loss_q2       | 0.0108   |
+| loss_q3       | 0.0113   |
+| param_norm    | 214      |
+| samples       | 1.8e+03  |
+| step          | 1.8e+03  |
+----------------------------
+----------------------------
+| grad_norm     | 0.031    |
+| lg_loss_scale | 20.8     |
+| loss          | 0.00868  |
+| loss_q0       | 0.0112   |
+| loss_q1       | 0.00942  |
+| loss_q2       | 0.00658  |
+| loss_q3       | 0.00749  |
+| param_norm    | 214      |
+| samples       | 1.85e+03 |
+| step          | 1.85e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.0564   |
+| lg_loss_scale | 20.9     |
+| loss          | 0.014    |
+| loss_q0       | 0.0137   |
+| loss_q1       | 0.0129   |
+| loss_q2       | 0.0157   |
+| loss_q3       | 0.0129   |
+| param_norm    | 214      |
+| samples       | 1.9e+03  |
+| step          | 1.9e+03  |
+----------------------------
+----------------------------
+| grad_norm     | 0.0331   |
+| lg_loss_scale | 20.9     |
+| loss          | 0.0111   |
+| loss_q0       | 0.00819  |
+| loss_q1       | 0.00962  |
+| loss_q2       | 0.013    |
+| loss_q3       | 0.0136   |
+| param_norm    | 214      |
+| samples       | 1.95e+03 |
+| step          | 1.95e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.0542   |
+| lg_loss_scale | 21       |
+| loss          | 0.011    |
+| loss_q0       | 0.0158   |
+| loss_q1       | 0.0114   |
+| loss_q2       | 0.00755  |
+| loss_q3       | 0.00869  |
+| param_norm    | 214      |
+| samples       | 2e+03    |
+| step          | 2e+03    |
+----------------------------
+saving RAW-ONLY checkpoint to /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/experiments/c4_cc_oof897_5k_v1/model002000.pt
+Found NaN, decreased lg_loss_scale to 20.009000000002455
+----------------------------
+| grad_norm     | 0.0701   |
+| lg_loss_scale | 20.2     |
+| loss          | 0.0134   |
+| loss_q0       | 0.0164   |
+| loss_q1       | 0.0101   |
+| loss_q2       | 0.0082   |
+| loss_q3       | 0.0187   |
+| param_norm    | 214      |
+| samples       | 2.05e+03 |
+| step          | 2.05e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.0361   |
+| lg_loss_scale | 20.1     |
+| loss          | 0.0131   |
+| loss_q0       | 0.0157   |
+| loss_q1       | 0.0109   |
+| loss_q2       | 0.00999  |
+| loss_q3       | 0.0149   |
+| param_norm    | 214      |
+| samples       | 2.1e+03  |
+| step          | 2.1e+03  |
+----------------------------
+----------------------------
+| grad_norm     | 0.0592   |
+| lg_loss_scale | 20.1     |
+| loss          | 0.0102   |
+| loss_q0       | 0.0114   |
+| loss_q1       | 0.00701  |
+| loss_q2       | 0.0141   |
+| loss_q3       | 0.00848  |
+| param_norm    | 214      |
+| samples       | 2.15e+03 |
+| step          | 2.15e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.07     |
+| lg_loss_scale | 20.2     |
+| loss          | 0.012    |
+| loss_q0       | 0.0166   |
+| loss_q1       | 0.013    |
+| loss_q2       | 0.00843  |
+| loss_q3       | 0.0113   |
+| param_norm    | 214      |
+| samples       | 2.2e+03  |
+| step          | 2.2e+03  |
+----------------------------
+----------------------------
+| grad_norm     | 0.0459   |
+| lg_loss_scale | 20.2     |
+| loss          | 0.00966  |
+| loss_q0       | 0.0125   |
+| loss_q1       | 0.0112   |
+| loss_q2       | 0.00648  |
+| loss_q3       | 0.00847  |
+| param_norm    | 214      |
+| samples       | 2.25e+03 |
+| step          | 2.25e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.0433   |
+| lg_loss_scale | 20.3     |
+| loss          | 0.0105   |
+| loss_q0       | 0.00845  |
+| loss_q1       | 0.0124   |
+| loss_q2       | 0.00988  |
+| loss_q3       | 0.012    |
+| param_norm    | 214      |
+| samples       | 2.3e+03  |
+| step          | 2.3e+03  |
+----------------------------
+----------------------------
+| grad_norm     | 0.0358   |
+| lg_loss_scale | 20.3     |
+| loss          | 0.00957  |
+| loss_q0       | 0.0106   |
+| loss_q1       | 0.00915  |
+| loss_q2       | 0.0107   |
+| loss_q3       | 0.00764  |
+| param_norm    | 214      |
+| samples       | 2.35e+03 |
+| step          | 2.35e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.0514   |
+| lg_loss_scale | 20.4     |
+| loss          | 0.00823  |
+| loss_q0       | 0.0093   |
+| loss_q1       | 0.00834  |
+| loss_q2       | 0.00965  |
+| loss_q3       | 0.00438  |
+| param_norm    | 214      |
+| samples       | 2.4e+03  |
+| step          | 2.4e+03  |
+----------------------------
+----------------------------
+| grad_norm     | 0.0662   |
+| lg_loss_scale | 20.4     |
+| loss          | 0.0127   |
+| loss_q0       | 0.0105   |
+| loss_q1       | 0.012    |
+| loss_q2       | 0.0158   |
+| loss_q3       | 0.0137   |
+| param_norm    | 214      |
+| samples       | 2.45e+03 |
+| step          | 2.45e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.0319   |
+| lg_loss_scale | 20.5     |
+| loss          | 0.0109   |
+| loss_q0       | 0.00842  |
+| loss_q1       | 0.0176   |
+| loss_q2       | 0.00998  |
+| loss_q3       | 0.00692  |
+| param_norm    | 214      |
+| samples       | 2.5e+03  |
+| step          | 2.5e+03  |
+----------------------------
+saving RAW-ONLY checkpoint to /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/experiments/c4_cc_oof897_5k_v1/model002500.pt
+----------------------------
+| grad_norm     | 0.0295   |
+| lg_loss_scale | 20.5     |
+| loss          | 0.00868  |
+| loss_q0       | 0.00861  |
+| loss_q1       | 0.0105   |
+| loss_q2       | 0.00648  |
+| loss_q3       | 0.00899  |
+| param_norm    | 214      |
+| samples       | 2.55e+03 |
+| step          | 2.55e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.0306   |
+| lg_loss_scale | 20.6     |
+| loss          | 0.00891  |
+| loss_q0       | 0.00697  |
+| loss_q1       | 0.0112   |
+| loss_q2       | 0.00743  |
+| loss_q3       | 0.0103   |
+| param_norm    | 214      |
+| samples       | 2.6e+03  |
+| step          | 2.6e+03  |
+----------------------------
+----------------------------
+| grad_norm     | 0.0258   |
+| lg_loss_scale | 20.6     |
+| loss          | 0.0111   |
+| loss_q0       | 0.0133   |
+| loss_q1       | 0.0106   |
+| loss_q2       | 0.0121   |
+| loss_q3       | 0.00846  |
+| param_norm    | 214      |
+| samples       | 2.65e+03 |
+| step          | 2.65e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.0555   |
+| lg_loss_scale | 20.7     |
+| loss          | 0.00932  |
+| loss_q0       | 0.0068   |
+| loss_q1       | 0.0109   |
+| loss_q2       | 0.0063   |
+| loss_q3       | 0.0136   |
+| param_norm    | 214      |
+| samples       | 2.7e+03  |
+| step          | 2.7e+03  |
+----------------------------
+----------------------------
+| grad_norm     | 0.0265   |
+| lg_loss_scale | 20.7     |
+| loss          | 0.0106   |
+| loss_q0       | 0.0114   |
+| loss_q1       | 0.0139   |
+| loss_q2       | 0.0099   |
+| loss_q3       | 0.00746  |
+| param_norm    | 214      |
+| samples       | 2.75e+03 |
+| step          | 2.75e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.047    |
+| lg_loss_scale | 20.8     |
+| loss          | 0.00831  |
+| loss_q0       | 0.0101   |
+| loss_q1       | 0.00751  |
+| loss_q2       | 0.0077   |
+| loss_q3       | 0.00767  |
+| param_norm    | 215      |
+| samples       | 2.8e+03  |
+| step          | 2.8e+03  |
+----------------------------
+----------------------------
+| grad_norm     | 0.0344   |
+| lg_loss_scale | 20.8     |
+| loss          | 0.0123   |
+| loss_q0       | 0.0178   |
+| loss_q1       | 0.0101   |
+| loss_q2       | 0.0122   |
+| loss_q3       | 0.00978  |
+| param_norm    | 215      |
+| samples       | 2.85e+03 |
+| step          | 2.85e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.0688   |
+| lg_loss_scale | 20.9     |
+| loss          | 0.0104   |
+| loss_q0       | 0.0149   |
+| loss_q1       | 0.013    |
+| loss_q2       | 0.00355  |
+| loss_q3       | 0.00824  |
+| param_norm    | 215      |
+| samples       | 2.9e+03  |
+| step          | 2.9e+03  |
+----------------------------
+----------------------------
+| grad_norm     | 0.0325   |
+| lg_loss_scale | 20.9     |
+| loss          | 0.00998  |
+| loss_q0       | 0.00582  |
+| loss_q1       | 0.0106   |
+| loss_q2       | 0.0102   |
+| loss_q3       | 0.0127   |
+| param_norm    | 215      |
+| samples       | 2.95e+03 |
+| step          | 2.95e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.0297   |
+| lg_loss_scale | 21       |
+| loss          | 0.0099   |
+| loss_q0       | 0.00344  |
+| loss_q1       | 0.0106   |
+| loss_q2       | 0.0118   |
+| loss_q3       | 0.0114   |
+| param_norm    | 215      |
+| samples       | 3e+03    |
+| step          | 3e+03    |
+----------------------------
+saving RAW-ONLY checkpoint to /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/experiments/c4_cc_oof897_5k_v1/model003000.pt
+----------------------------
+| grad_norm     | 0.0443   |
+| lg_loss_scale | 21       |
+| loss          | 0.00953  |
+| loss_q0       | 0.00941  |
+| loss_q1       | 0.0104   |
+| loss_q2       | 0.00971  |
+| loss_q3       | 0.00682  |
+| param_norm    | 215      |
+| samples       | 3.05e+03 |
+| step          | 3.05e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.0493   |
+| lg_loss_scale | 21.1     |
+| loss          | 0.0114   |
+| loss_q0       | 0.0139   |
+| loss_q1       | 0.00837  |
+| loss_q2       | 0.0124   |
+| loss_q3       | 0.0104   |
+| param_norm    | 215      |
+| samples       | 3.1e+03  |
+| step          | 3.1e+03  |
+----------------------------
+----------------------------
+| grad_norm     | 0.0307   |
+| lg_loss_scale | 21.1     |
+| loss          | 0.00928  |
+| loss_q0       | 0.0105   |
+| loss_q1       | 0.0127   |
+| loss_q2       | 0.00685  |
+| loss_q3       | 0.00897  |
+| param_norm    | 215      |
+| samples       | 3.15e+03 |
+| step          | 3.15e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.0349   |
+| lg_loss_scale | 21.2     |
+| loss          | 0.0104   |
+| loss_q0       | 0.00757  |
+| loss_q1       | 0.0121   |
+| loss_q2       | 0.00868  |
+| loss_q3       | 0.0125   |
+| param_norm    | 215      |
+| samples       | 3.2e+03  |
+| step          | 3.2e+03  |
+----------------------------
+----------------------------
+| grad_norm     | 0.03     |
+| lg_loss_scale | 21.2     |
+| loss          | 0.00746  |
+| loss_q0       | 0.00803  |
+| loss_q1       | 0.00232  |
+| loss_q2       | 0.00792  |
+| loss_q3       | 0.00931  |
+| param_norm    | 215      |
+| samples       | 3.25e+03 |
+| step          | 3.25e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.0217   |
+| lg_loss_scale | 21.3     |
+| loss          | 0.00827  |
+| loss_q0       | 0.00922  |
+| loss_q1       | 0.00976  |
+| loss_q2       | 0.00681  |
+| loss_q3       | 0.00704  |
+| param_norm    | 215      |
+| samples       | 3.3e+03  |
+| step          | 3.3e+03  |
+----------------------------
+Found NaN, decreased lg_loss_scale to 20.324000000004062
+----------------------------
+| grad_norm     | 0.0326   |
+| lg_loss_scale | 20.8     |
+| loss          | 0.00886  |
+| loss_q0       | 0.00521  |
+| loss_q1       | 0.0133   |
+| loss_q2       | 0.00854  |
+| loss_q3       | 0.00961  |
+| param_norm    | 215      |
+| samples       | 3.35e+03 |
+| step          | 3.35e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.0274   |
+| lg_loss_scale | 20.4     |
+| loss          | 0.0107   |
+| loss_q0       | 0.0107   |
+| loss_q1       | 0.01     |
+| loss_q2       | 0.0141   |
+| loss_q3       | 0.00839  |
+| param_norm    | 215      |
+| samples       | 3.4e+03  |
+| step          | 3.4e+03  |
+----------------------------
+----------------------------
+| grad_norm     | 0.0236   |
+| lg_loss_scale | 20.4     |
+| loss          | 0.00829  |
+| loss_q0       | 0.0102   |
+| loss_q1       | 0.00533  |
+| loss_q2       | 0.00628  |
+| loss_q3       | 0.0109   |
+| param_norm    | 215      |
+| samples       | 3.45e+03 |
+| step          | 3.45e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.0408   |
+| lg_loss_scale | 20.5     |
+| loss          | 0.00853  |
+| loss_q0       | 0.0171   |
+| loss_q1       | 0.00654  |
+| loss_q2       | 0.00496  |
+| loss_q3       | 0.00732  |
+| param_norm    | 215      |
+| samples       | 3.5e+03  |
+| step          | 3.5e+03  |
+----------------------------
+saving RAW-ONLY checkpoint to /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/experiments/c4_cc_oof897_5k_v1/model003500.pt
+----------------------------
+| grad_norm     | 0.0294   |
+| lg_loss_scale | 20.5     |
+| loss          | 0.0104   |
+| loss_q0       | 0.0116   |
+| loss_q1       | 0.0112   |
+| loss_q2       | 0.0128   |
+| loss_q3       | 0.00717  |
+| param_norm    | 215      |
+| samples       | 3.55e+03 |
+| step          | 3.55e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.0393   |
+| lg_loss_scale | 20.6     |
+| loss          | 0.00983  |
+| loss_q0       | 0.0124   |
+| loss_q1       | 0.00938  |
+| loss_q2       | 0.00771  |
+| loss_q3       | 0.0108   |
+| param_norm    | 215      |
+| samples       | 3.6e+03  |
+| step          | 3.6e+03  |
+----------------------------
+----------------------------
+| grad_norm     | 0.042    |
+| lg_loss_scale | 20.6     |
+| loss          | 0.00914  |
+| loss_q0       | 0.00757  |
+| loss_q1       | 0.00796  |
+| loss_q2       | 0.0114   |
+| loss_q3       | 0.0109   |
+| param_norm    | 215      |
+| samples       | 3.65e+03 |
+| step          | 3.65e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.0381   |
+| lg_loss_scale | 20.7     |
+| loss          | 0.00877  |
+| loss_q0       | 0.00922  |
+| loss_q1       | 0.00745  |
+| loss_q2       | 0.00598  |
+| loss_q3       | 0.0129   |
+| param_norm    | 215      |
+| samples       | 3.7e+03  |
+| step          | 3.7e+03  |
+----------------------------
+----------------------------
+| grad_norm     | 0.0375   |
+| lg_loss_scale | 20.7     |
+| loss          | 0.0104   |
+| loss_q0       | 0.0131   |
+| loss_q1       | 0.00896  |
+| loss_q2       | 0.0108   |
+| loss_q3       | 0.00945  |
+| param_norm    | 215      |
+| samples       | 3.75e+03 |
+| step          | 3.75e+03 |
+----------------------------
+Found NaN, decreased lg_loss_scale to 19.777000000004616
+----------------------------
+| grad_norm     | 0.0278   |
+| lg_loss_scale | 20.3     |
+| loss          | 0.00766  |
+| loss_q0       | 0.00806  |
+| loss_q1       | 0.00728  |
+| loss_q2       | 0.00929  |
+| loss_q3       | 0.00537  |
+| param_norm    | 215      |
+| samples       | 3.8e+03  |
+| step          | 3.8e+03  |
+----------------------------
+----------------------------
+| grad_norm     | 0.034    |
+| lg_loss_scale | 19.8     |
+| loss          | 0.00922  |
+| loss_q0       | 0.00991  |
+| loss_q1       | 0.00578  |
+| loss_q2       | 0.00732  |
+| loss_q3       | 0.016    |
+| param_norm    | 215      |
+| samples       | 3.85e+03 |
+| step          | 3.85e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.0271   |
+| lg_loss_scale | 19.9     |
+| loss          | 0.0126   |
+| loss_q0       | 0.012    |
+| loss_q1       | 0.0107   |
+| loss_q2       | 0.0147   |
+| loss_q3       | 0.0129   |
+| param_norm    | 215      |
+| samples       | 3.9e+03  |
+| step          | 3.9e+03  |
+----------------------------
+----------------------------
+| grad_norm     | 0.025    |
+| lg_loss_scale | 19.9     |
+| loss          | 0.0111   |
+| loss_q0       | 0.0144   |
+| loss_q1       | 0.00912  |
+| loss_q2       | 0.00915  |
+| loss_q3       | 0.0109   |
+| param_norm    | 215      |
+| samples       | 3.95e+03 |
+| step          | 3.95e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.0542   |
+| lg_loss_scale | 20       |
+| loss          | 0.0104   |
+| loss_q0       | 0.00949  |
+| loss_q1       | 0.00976  |
+| loss_q2       | 0.0133   |
+| loss_q3       | 0.0102   |
+| param_norm    | 215      |
+| samples       | 4e+03    |
+| step          | 4e+03    |
+----------------------------
+saving RAW-ONLY checkpoint to /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/experiments/c4_cc_oof897_5k_v1/model004000.pt
+----------------------------
+| grad_norm     | 0.0228   |
+| lg_loss_scale | 20       |
+| loss          | 0.00726  |
+| loss_q0       | 0.00833  |
+| loss_q1       | 0.00663  |
+| loss_q2       | 0.00702  |
+| loss_q3       | 0.00743  |
+| param_norm    | 215      |
+| samples       | 4.05e+03 |
+| step          | 4.05e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.0281   |
+| lg_loss_scale | 20.1     |
+| loss          | 0.00981  |
+| loss_q0       | 0.0105   |
+| loss_q1       | 0.0101   |
+| loss_q2       | 0.00977  |
+| loss_q3       | 0.00864  |
+| param_norm    | 215      |
+| samples       | 4.1e+03  |
+| step          | 4.1e+03  |
+----------------------------
+----------------------------
+| grad_norm     | 0.0322   |
+| lg_loss_scale | 20.1     |
+| loss          | 0.0101   |
+| loss_q0       | 0.00956  |
+| loss_q1       | 0.00708  |
+| loss_q2       | 0.0107   |
+| loss_q3       | 0.0127   |
+| param_norm    | 215      |
+| samples       | 4.15e+03 |
+| step          | 4.15e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.0223   |
+| lg_loss_scale | 20.2     |
+| loss          | 0.0104   |
+| loss_q0       | 0.00926  |
+| loss_q1       | 0.012    |
+| loss_q2       | 0.00956  |
+| loss_q3       | 0.0115   |
+| param_norm    | 215      |
+| samples       | 4.2e+03  |
+| step          | 4.2e+03  |
+----------------------------
+----------------------------
+| grad_norm     | 0.0352   |
+| lg_loss_scale | 20.2     |
+| loss          | 0.00984  |
+| loss_q0       | 0.00999  |
+| loss_q1       | 0.00789  |
+| loss_q2       | 0.0112   |
+| loss_q3       | 0.0106   |
+| param_norm    | 215      |
+| samples       | 4.25e+03 |
+| step          | 4.25e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.0319   |
+| lg_loss_scale | 20.3     |
+| loss          | 0.0113   |
+| loss_q0       | 0.0058   |
+| loss_q1       | 0.0121   |
+| loss_q2       | 0.00995  |
+| loss_q3       | 0.0186   |
+| param_norm    | 215      |
+| samples       | 4.3e+03  |
+| step          | 4.3e+03  |
+----------------------------
+----------------------------
+| grad_norm     | 0.0292   |
+| lg_loss_scale | 20.3     |
+| loss          | 0.0103   |
+| loss_q0       | 0.005    |
+| loss_q1       | 0.0134   |
+| loss_q2       | 0.00657  |
+| loss_q3       | 0.0137   |
+| param_norm    | 215      |
+| samples       | 4.35e+03 |
+| step          | 4.35e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.0336   |
+| lg_loss_scale | 20.4     |
+| loss          | 0.0104   |
+| loss_q0       | 0.0124   |
+| loss_q1       | 0.0101   |
+| loss_q2       | 0.00667  |
+| loss_q3       | 0.0128   |
+| param_norm    | 215      |
+| samples       | 4.4e+03  |
+| step          | 4.4e+03  |
+----------------------------
+----------------------------
+| grad_norm     | 0.0334   |
+| lg_loss_scale | 20.4     |
+| loss          | 0.00977  |
+| loss_q0       | 0.0124   |
+| loss_q1       | 0.0101   |
+| loss_q2       | 0.00681  |
+| loss_q3       | 0.00913  |
+| param_norm    | 215      |
+| samples       | 4.45e+03 |
+| step          | 4.45e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.0216   |
+| lg_loss_scale | 20.5     |
+| loss          | 0.0074   |
+| loss_q0       | 0.00756  |
+| loss_q1       | 0.00834  |
+| loss_q2       | 0.00714  |
+| loss_q3       | 0.00608  |
+| param_norm    | 215      |
+| samples       | 4.5e+03  |
+| step          | 4.5e+03  |
+----------------------------
+saving RAW-ONLY checkpoint to /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/experiments/c4_cc_oof897_5k_v1/model004500.pt
+----------------------------
+| grad_norm     | 0.0265   |
+| lg_loss_scale | 20.5     |
+| loss          | 0.0103   |
+| loss_q0       | 0.00933  |
+| loss_q1       | 0.0103   |
+| loss_q2       | 0.0133   |
+| loss_q3       | 0.00715  |
+| param_norm    | 215      |
+| samples       | 4.55e+03 |
+| step          | 4.55e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.027    |
+| lg_loss_scale | 20.6     |
+| loss          | 0.0112   |
+| loss_q0       | 0.00968  |
+| loss_q1       | 0.0128   |
+| loss_q2       | 0.00821  |
+| loss_q3       | 0.0139   |
+| param_norm    | 215      |
+| samples       | 4.6e+03  |
+| step          | 4.6e+03  |
+----------------------------
+----------------------------
+| grad_norm     | 0.0196   |
+| lg_loss_scale | 20.6     |
+| loss          | 0.0105   |
+| loss_q0       | 0.0107   |
+| loss_q1       | 0.0132   |
+| loss_q2       | 0.0103   |
+| loss_q3       | 0.00879  |
+| param_norm    | 215      |
+| samples       | 4.65e+03 |
+| step          | 4.65e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.0243   |
+| lg_loss_scale | 20.7     |
+| loss          | 0.0108   |
+| loss_q0       | 0.00977  |
+| loss_q1       | 0.0121   |
+| loss_q2       | 0.0107   |
+| loss_q3       | 0.0106   |
+| param_norm    | 215      |
+| samples       | 4.7e+03  |
+| step          | 4.7e+03  |
+----------------------------
+----------------------------
+| grad_norm     | 0.0193   |
+| lg_loss_scale | 20.7     |
+| loss          | 0.00777  |
+| loss_q0       | 0.00682  |
+| loss_q1       | 0.00712  |
+| loss_q2       | 0.0081   |
+| loss_q3       | 0.00984  |
+| param_norm    | 215      |
+| samples       | 4.75e+03 |
+| step          | 4.75e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.0265   |
+| lg_loss_scale | 20.8     |
+| loss          | 0.00999  |
+| loss_q0       | 0.00838  |
+| loss_q1       | 0.0121   |
+| loss_q2       | 0.00259  |
+| loss_q3       | 0.0118   |
+| param_norm    | 215      |
+| samples       | 4.8e+03  |
+| step          | 4.8e+03  |
+----------------------------
+----------------------------
+| grad_norm     | 0.0322   |
+| lg_loss_scale | 20.8     |
+| loss          | 0.00911  |
+| loss_q0       | 0.00877  |
+| loss_q1       | 0.00638  |
+| loss_q2       | 0.00502  |
+| loss_q3       | 0.0135   |
+| param_norm    | 215      |
+| samples       | 4.85e+03 |
+| step          | 4.85e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.0431   |
+| lg_loss_scale | 20.9     |
+| loss          | 0.00839  |
+| loss_q0       | 0.00732  |
+| loss_q1       | 0.00964  |
+| loss_q2       | 0.0079   |
+| loss_q3       | 0.00928  |
+| param_norm    | 215      |
+| samples       | 4.9e+03  |
+| step          | 4.9e+03  |
+----------------------------
+----------------------------
+| grad_norm     | 0.0296   |
+| lg_loss_scale | 20.9     |
+| loss          | 0.011    |
+| loss_q0       | 0.0108   |
+| loss_q1       | 0.0152   |
+| loss_q2       | 0.00766  |
+| loss_q3       | 0.00971  |
+| param_norm    | 215      |
+| samples       | 4.95e+03 |
+| step          | 4.95e+03 |
+----------------------------
+----------------------------
+| grad_norm     | 0.0242   |
+| lg_loss_scale | 21       |
+| loss          | 0.009    |
+| loss_q0       | 0.00882  |
+| loss_q1       | 0.0108   |
+| loss_q2       | 0.00802  |
+| loss_q3       | 0.00842  |
+| param_norm    | 215      |
+| samples       | 5e+03    |
+| step          | 5e+03    |
+----------------------------
+saving RAW-ONLY checkpoint to /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/experiments/c4_cc_oof897_5k_v1/model005000.pt
+[PASS] C4 training completed.

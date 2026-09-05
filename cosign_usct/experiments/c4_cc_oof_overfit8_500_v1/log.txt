@@ -1,0 +1,379 @@
+Logging to /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/experiments/c4_cc_oof_overfit8_500_v1
+===== C4 USCT Conditional CM =====
+gt_npy   = /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/data/smoke_train_gt_norm.npy
+hint_npy = /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/data/smoke_train_cond_norm.npy
+unet     = /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/checkpoints/c3_cm_best_ema25k.pt
+steps    = 500
+batch    = 1
+loss     = recon/l2
+creating ControlNet / ControlledUnet / diffusion...
+loading C3 backbone from /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/checkpoints/c3_cm_best_ema25k.pt
+ControlNet init: missing=40, unexpected=324
+creating paired GT/OOF-hint loader...
+preflight GT   shape=(1, 1, 256, 256) range=(-0.479437,0.488941)
+preflight hint shape=(1, 1, 256, 256) range=(-0.415746,0.951219)
+training...
+----------------------------
+| grad_norm     | 0.0302   |
+| lg_loss_scale | 20       |
+| loss          | 0.0302   |
+| loss_q0       | 0.0412   |
+| loss_q1       | 2.58e-05 |
+| loss_q2       | 0.0226   |
+| loss_q3       | 0.0438   |
+| param_norm    | 214      |
+| samples       | 11       |
+| step          | 10       |
+----------------------------
+----------------------------
+| grad_norm     | 0.026    |
+| lg_loss_scale | 20       |
+| loss          | 0.0211   |
+| loss_q0       | 0.00448  |
+| loss_q1       | 0.0257   |
+| loss_q2       | 0.0614   |
+| loss_q3       | 0.0273   |
+| param_norm    | 214      |
+| samples       | 21       |
+| step          | 20       |
+----------------------------
+----------------------------
+| grad_norm     | 0.0286   |
+| lg_loss_scale | 20       |
+| loss          | 0.0223   |
+| loss_q0       | 0.0366   |
+| loss_q1       | 0.0201   |
+| loss_q2       | 0.0174   |
+| loss_q3       | 0.000181 |
+| param_norm    | 214      |
+| samples       | 31       |
+| step          | 30       |
+----------------------------
+----------------------------
+| grad_norm     | 0.0298   |
+| lg_loss_scale | 20       |
+| loss          | 0.0319   |
+| loss_q0       | 0.0402   |
+| loss_q1       | 0.0177   |
+| loss_q2       | 0.0592   |
+| loss_q3       | 0.0148   |
+| param_norm    | 214      |
+| samples       | 41       |
+| step          | 40       |
+----------------------------
+----------------------------
+| grad_norm     | 0.0192   |
+| lg_loss_scale | 20       |
+| loss          | 0.014    |
+| loss_q0       | 0.0138   |
+| loss_q1       | 0.0241   |
+| loss_q2       | 0.000929 |
+| loss_q3       | 0.0233   |
+| param_norm    | 214      |
+| samples       | 51       |
+| step          | 50       |
+----------------------------
+----------------------------
+| grad_norm     | 0.0235   |
+| lg_loss_scale | 20.1     |
+| loss          | 0.0222   |
+| loss_q0       | 0.0203   |
+| loss_q1       | 0.033    |
+| loss_q2       | 0.00229  |
+| loss_q3       | 0.0252   |
+| param_norm    | 214      |
+| samples       | 61       |
+| step          | 60       |
+----------------------------
+----------------------------
+| grad_norm     | 0.0316   |
+| lg_loss_scale | 20.1     |
+| loss          | 0.0244   |
+| loss_q0       | 0.0278   |
+| loss_q1       | 0.0125   |
+| loss_q2       | 0.024    |
+| loss_q3       | 0.0381   |
+| param_norm    | 214      |
+| samples       | 71       |
+| step          | 70       |
+----------------------------
+----------------------------
+| grad_norm     | 0.027    |
+| lg_loss_scale | 20.1     |
+| loss          | 0.019    |
+| loss_q0       | 0.0221   |
+| loss_q1       | 0.0547   |
+| loss_q2       | 0.0106   |
+| loss_q3       | 0.00865  |
+| param_norm    | 214      |
+| samples       | 81       |
+| step          | 80       |
+----------------------------
+----------------------------
+| grad_norm     | 0.0328   |
+| lg_loss_scale | 20.1     |
+| loss          | 0.0282   |
+| loss_q0       | 0.0407   |
+| loss_q1       | 0.0185   |
+| loss_q2       | 0.0445   |
+| loss_q3       | 0.0167   |
+| param_norm    | 214      |
+| samples       | 91       |
+| step          | 90       |
+----------------------------
+----------------------------
+| grad_norm     | 0.022    |
+| lg_loss_scale | 20.1     |
+| loss          | 0.0128   |
+| loss_q0       | 0.00708  |
+| loss_q1       | 0.0122   |
+| loss_q2       | 0.0177   |
+| loss_q3       | 0.0146   |
+| param_norm    | 214      |
+| samples       | 101      |
+| step          | 100      |
+----------------------------
+saving model 0.9999...
+saving optimizer state...
+saving model 0...
+----------------------------
+| grad_norm     | 0.0189   |
+| lg_loss_scale | 20.1     |
+| loss          | 0.0131   |
+| loss_q0       | 0.0174   |
+| loss_q1       | 0.0197   |
+| loss_q2       | 0.000641 |
+| loss_q3       | 0.0101   |
+| param_norm    | 214      |
+| samples       | 111      |
+| step          | 110      |
+----------------------------
+----------------------------
+| grad_norm     | 0.0315   |
+| lg_loss_scale | 20.1     |
+| loss          | 0.0219   |
+| loss_q0       | 0.024    |
+| loss_q1       | 0.018    |
+| loss_q2       | 0.0177   |
+| loss_q3       | 0.0235   |
+| param_norm    | 214      |
+| samples       | 121      |
+| step          | 120      |
+----------------------------
+----------------------------
+| grad_norm     | 0.0237   |
+| lg_loss_scale | 20.1     |
+| loss          | 0.0126   |
+| loss_q0       | 0.0179   |
+| loss_q1       | 0.0139   |
+| loss_q2       | 0.000633 |
+| loss_q3       | 0.011    |
+| param_norm    | 214      |
+| samples       | 131      |
+| step          | 130      |
+----------------------------
+----------------------------
+| grad_norm     | 0.012    |
+| lg_loss_scale | 20.1     |
+| loss          | 0.00668  |
+| loss_q0       | 0.00402  |
+| loss_q1       | 0.00237  |
+| loss_q2       | 0.00754  |
+| loss_q3       | 0.0171   |
+| param_norm    | 214      |
+| samples       | 141      |
+| step          | 140      |
+----------------------------
+----------------------------
+| grad_norm     | 0.0334   |
+| lg_loss_scale | 20.1     |
+| loss          | 0.0201   |
+| loss_q0       | 0.00781  |
+| loss_q1       | 0.0284   |
+| loss_q2       | 0.014    |
+| loss_q3       | 0.0157   |
+| param_norm    | 214      |
+| samples       | 151      |
+| step          | 150      |
+----------------------------
+----------------------------
+| grad_norm     | 0.0285   |
+| lg_loss_scale | 20.2     |
+| loss          | 0.0148   |
+| loss_q0       | 0.0133   |
+| loss_q1       | 0.012    |
+| loss_q2       | 0.0104   |
+| loss_q3       | 0.0208   |
+| param_norm    | 214      |
+| samples       | 161      |
+| step          | 160      |
+----------------------------
+----------------------------
+| grad_norm     | 0.023    |
+| lg_loss_scale | 20.2     |
+| loss          | 0.0135   |
+| loss_q0       | 0.00877  |
+| loss_q1       | 0.0156   |
+| loss_q2       | 0.00392  |
+| loss_q3       | 0.062    |
+| param_norm    | 214      |
+| samples       | 171      |
+| step          | 170      |
+----------------------------
+----------------------------
+| grad_norm     | 0.0233   |
+| lg_loss_scale | 20.2     |
+| loss          | 0.0187   |
+| loss_q0       | 0.0122   |
+| loss_q1       | 0.0149   |
+| loss_q2       | 0.0111   |
+| loss_q3       | 0.0789   |
+| param_norm    | 214      |
+| samples       | 181      |
+| step          | 180      |
+----------------------------
+----------------------------
+| grad_norm     | 0.016    |
+| lg_loss_scale | 20.2     |
+| loss          | 0.013    |
+| loss_q0       | 0.00631  |
+| loss_q1       | 0.00729  |
+| loss_q2       | 0.0289   |
+| loss_q3       | 0.00554  |
+| param_norm    | 214      |
+| samples       | 191      |
+| step          | 190      |
+----------------------------
+----------------------------
+| grad_norm     | 0.0234   |
+| lg_loss_scale | 20.2     |
+| loss          | 0.0125   |
+| loss_q0       | 0.00487  |
+| loss_q1       | 0.0353   |
+| loss_q2       | 0.00625  |
+| loss_q3       | 0.00744  |
+| param_norm    | 214      |
+| samples       | 201      |
+| step          | 200      |
+----------------------------
+saving model 0.9999...
+saving optimizer state...
+saving model 0...
+----------------------------
+| grad_norm     | 0.0225   |
+| lg_loss_scale | 20.2     |
+| loss          | 0.0106   |
+| loss_q0       | 0.0131   |
+| loss_q2       | 0.00458  |
+| loss_q3       | 0.0139   |
+| param_norm    | 214      |
+| samples       | 211      |
+| step          | 210      |
+----------------------------
+----------------------------
+| grad_norm     | 0.0181   |
+| lg_loss_scale | 20.2     |
+| loss          | 0.0126   |
+| loss_q0       | 0.011    |
+| loss_q1       | 0.0121   |
+| loss_q2       | 0.00566  |
+| loss_q3       | 0.0581   |
+| param_norm    | 214      |
+| samples       | 221      |
+| step          | 220      |
+----------------------------
+----------------------------
+| grad_norm     | 0.0159   |
+| lg_loss_scale | 20.2     |
+| loss          | 0.0103   |
+| loss_q0       | 0.0278   |
+| loss_q1       | 0.00628  |
+| loss_q2       | 0.00922  |
+| loss_q3       | 0.000253 |
+| param_norm    | 214      |
+| samples       | 231      |
+| step          | 230      |
+----------------------------
+----------------------------
+| grad_norm     | 0.0139   |
+| lg_loss_scale | 20.2     |
+| loss          | 0.00979  |
+| loss_q0       | 0.00402  |
+| loss_q1       | 0.00998  |
+| loss_q2       | 0.012    |
+| loss_q3       | 0.0178   |
+| param_norm    | 214      |
+| samples       | 241      |
+| step          | 240      |
+----------------------------
+----------------------------
+| grad_norm     | 0.0251   |
+| lg_loss_scale | 20.2     |
+| loss          | 0.0145   |
+| loss_q0       | 0.0091   |
+| loss_q1       | 0.0114   |
+| loss_q3       | 0.0161   |
+| param_norm    | 214      |
+| samples       | 251      |
+| step          | 250      |
+----------------------------
+----------------------------
+| grad_norm     | 0.0108   |
+| lg_loss_scale | 20.3     |
+| loss          | 0.0066   |
+| loss_q0       | 0.00441  |
+| loss_q1       | 0.00169  |
+| loss_q2       | 0.0155   |
+| loss_q3       | 0.00286  |
+| param_norm    | 214      |
+| samples       | 261      |
+| step          | 260      |
+----------------------------
+----------------------------
+| grad_norm     | 0.0119   |
+| lg_loss_scale | 20.3     |
+| loss          | 0.00622  |
+| loss_q0       | 0.000123 |
+| loss_q1       | 0.0083   |
+| loss_q2       | 0.00625  |
+| loss_q3       | 0.00713  |
+| param_norm    | 214      |
+| samples       | 271      |
+| step          | 270      |
+----------------------------
+----------------------------
+| grad_norm     | 0.0186   |
+| lg_loss_scale | 20.3     |
+| loss          | 0.0107   |
+| loss_q2       | 0.00721  |
+| loss_q3       | 0.013    |
+| param_norm    | 214      |
+| samples       | 281      |
+| step          | 280      |
+----------------------------
+----------------------------
+| grad_norm     | 0.0223   |
+| lg_loss_scale | 20.3     |
+| loss          | 0.0136   |
+| loss_q0       | 0.00655  |
+| loss_q1       | 0.0209   |
+| loss_q2       | 0.00982  |
+| loss_q3       | 0.0101   |
+| param_norm    | 214      |
+| samples       | 291      |
+| step          | 290      |
+----------------------------
+----------------------------
+| grad_norm     | 0.0229   |
+| lg_loss_scale | 20.3     |
+| loss          | 0.0184   |
+| loss_q0       | 0.00664  |
+| loss_q1       | 0.0032   |
+| loss_q2       | 0.0347   |
+| loss_q3       | 0.0392   |
+| param_norm    | 214      |
+| samples       | 301      |
+| step          | 300      |
+----------------------------
+saving model 0.9999...
+saving optimizer state...

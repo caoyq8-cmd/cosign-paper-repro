@@ -1,0 +1,250 @@
+Logging to /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/experiments/c1_edm_smoke20_v3
+creating model and diffusion...
+creating data loader...
+dataset_mode=npy, data_dir=/home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/data/smoke_train_gt_norm.npy, global_batch_size=2, batch_size=-1
+creating data loader...
+training...
+-------------------------
+| grad_norm  | 11.3     |
+| loss       | 0.744    |
+| loss_q0    | 0.744    |
+| mse        | 0.744    |
+| mse_q0     | 0.744    |
+| param_norm | 131      |
+| samples    | 4        |
+| step       | 1        |
+| xs_mse     | 0.0788   |
+| xs_mse_q0  | 0.0788   |
+-------------------------
+-------------------------
+| grad_norm  | 10.3     |
+| loss       | 0.725    |
+| loss_q0    | 0.725    |
+| mse        | 0.725    |
+| mse_q0     | 0.725    |
+| param_norm | 131      |
+| samples    | 6        |
+| step       | 2        |
+| xs_mse     | 0.0497   |
+| xs_mse_q0  | 0.0497   |
+-------------------------
+-------------------------
+| grad_norm  | 10.6     |
+| loss       | 0.726    |
+| loss_q0    | 0.726    |
+| mse        | 0.726    |
+| mse_q0     | 0.726    |
+| param_norm | 131      |
+| samples    | 8        |
+| step       | 3        |
+| xs_mse     | 0.0503   |
+| xs_mse_q0  | 0.0503   |
+-------------------------
+-------------------------
+| grad_norm  | 6.37     |
+| loss       | 0.529    |
+| loss_q0    | 0.529    |
+| mse        | 0.529    |
+| mse_q0     | 0.529    |
+| param_norm | 131      |
+| samples    | 10       |
+| step       | 4        |
+| xs_mse     | 0.0234   |
+| xs_mse_q0  | 0.0234   |
+-------------------------
+-------------------------
+| grad_norm  | 8        |
+| loss       | 0.549    |
+| loss_q0    | 0.549    |
+| mse        | 0.549    |
+| mse_q0     | 0.549    |
+| param_norm | 131      |
+| samples    | 12       |
+| step       | 5        |
+| xs_mse     | 0.0371   |
+| xs_mse_q0  | 0.0371   |
+-------------------------
+-------------------------
+| grad_norm  | 7.97     |
+| loss       | 0.331    |
+| loss_q0    | 0.331    |
+| mse        | 0.331    |
+| mse_q0     | 0.331    |
+| param_norm | 131      |
+| samples    | 14       |
+| step       | 6        |
+| xs_mse     | 0.0594   |
+| xs_mse_q0  | 0.0594   |
+-------------------------
+-------------------------
+| grad_norm  | 7.55     |
+| loss       | 0.766    |
+| loss_q0    | 0.766    |
+| mse        | 0.766    |
+| mse_q0     | 0.766    |
+| param_norm | 131      |
+| samples    | 16       |
+| step       | 7        |
+| xs_mse     | 0.0618   |
+| xs_mse_q0  | 0.0618   |
+-------------------------
+-------------------------
+| grad_norm  | 9.28     |
+| loss       | 0.879    |
+| loss_q0    | 0.879    |
+| mse        | 0.879    |
+| mse_q0     | 0.879    |
+| param_norm | 131      |
+| samples    | 18       |
+| step       | 8        |
+| xs_mse     | 0.024    |
+| xs_mse_q0  | 0.024    |
+-------------------------
+-------------------------
+| grad_norm  | 6.1      |
+| loss       | 0.74     |
+| loss_q0    | 0.74     |
+| mse        | 0.74     |
+| mse_q0     | 0.74     |
+| param_norm | 131      |
+| samples    | 20       |
+| step       | 9        |
+| xs_mse     | 0.0633   |
+| xs_mse_q0  | 0.0633   |
+-------------------------
+-------------------------
+| grad_norm  | 10.4     |
+| loss       | 0.85     |
+| loss_q0    | 0.85     |
+| mse        | 0.85     |
+| mse_q0     | 0.85     |
+| param_norm | 131      |
+| samples    | 22       |
+| step       | 10       |
+| xs_mse     | 0.0307   |
+| xs_mse_q0  | 0.0307   |
+-------------------------
+-------------------------
+| grad_norm  | 7.94     |
+| loss       | 0.581    |
+| loss_q0    | 0.581    |
+| mse        | 0.581    |
+| mse_q0     | 0.581    |
+| param_norm | 131      |
+| samples    | 24       |
+| step       | 11       |
+| xs_mse     | 0.0367   |
+| xs_mse_q0  | 0.0367   |
+-------------------------
+-------------------------
+| grad_norm  | 8.37     |
+| loss       | 0.929    |
+| loss_q0    | 0.929    |
+| mse        | 0.929    |
+| mse_q0     | 0.929    |
+| param_norm | 131      |
+| samples    | 26       |
+| step       | 12       |
+| xs_mse     | 0.0129   |
+| xs_mse_q0  | 0.0129   |
+-------------------------
+-------------------------
+| grad_norm  | 9.7      |
+| loss       | 0.583    |
+| loss_q0    | 0.583    |
+| mse        | 0.583    |
+| mse_q0     | 0.583    |
+| param_norm | 131      |
+| samples    | 28       |
+| step       | 13       |
+| xs_mse     | 0.0524   |
+| xs_mse_q0  | 0.0524   |
+-------------------------
+-------------------------
+| grad_norm  | 9.06     |
+| loss       | 0.68     |
+| loss_q0    | 0.68     |
+| mse        | 0.68     |
+| mse_q0     | 0.68     |
+| param_norm | 131      |
+| samples    | 30       |
+| step       | 14       |
+| xs_mse     | 0.0465   |
+| xs_mse_q0  | 0.0465   |
+-------------------------
+-------------------------
+| grad_norm  | 9.65     |
+| loss       | 0.509    |
+| loss_q0    | 0.509    |
+| mse        | 0.509    |
+| mse_q0     | 0.509    |
+| param_norm | 131      |
+| samples    | 32       |
+| step       | 15       |
+| xs_mse     | 0.0638   |
+| xs_mse_q0  | 0.0638   |
+-------------------------
+-------------------------
+| grad_norm  | 8.56     |
+| loss       | 0.475    |
+| loss_q0    | 0.475    |
+| mse        | 0.475    |
+| mse_q0     | 0.475    |
+| param_norm | 131      |
+| samples    | 34       |
+| step       | 16       |
+| xs_mse     | 0.0509   |
+| xs_mse_q0  | 0.0509   |
+-------------------------
+-------------------------
+| grad_norm  | 9.38     |
+| loss       | 0.701    |
+| loss_q0    | 0.701    |
+| mse        | 0.701    |
+| mse_q0     | 0.701    |
+| param_norm | 131      |
+| samples    | 36       |
+| step       | 17       |
+| xs_mse     | 0.0413   |
+| xs_mse_q0  | 0.0413   |
+-------------------------
+-------------------------
+| grad_norm  | 2.23     |
+| loss       | 0.559    |
+| loss_q0    | 0.559    |
+| mse        | 0.559    |
+| mse_q0     | 0.559    |
+| param_norm | 131      |
+| samples    | 38       |
+| step       | 18       |
+| xs_mse     | 0.0149   |
+| xs_mse_q0  | 0.0149   |
+-------------------------
+-------------------------
+| grad_norm  | 9.83     |
+| loss       | 0.466    |
+| loss_q0    | 0.466    |
+| mse        | 0.466    |
+| mse_q0     | 0.466    |
+| param_norm | 131      |
+| samples    | 40       |
+| step       | 19       |
+| xs_mse     | 0.0721   |
+| xs_mse_q0  | 0.0721   |
+-------------------------
+-------------------------
+| grad_norm  | 9.93     |
+| loss       | 0.73     |
+| loss_q0    | 0.73     |
+| mse        | 0.73     |
+| mse_q0     | 0.73     |
+| param_norm | 131      |
+| samples    | 42       |
+| step       | 20       |
+| xs_mse     | 0.0424   |
+| xs_mse_q0  | 0.0424   |
+-------------------------
+saving model 0.9999...
+saving model 0...
+saving model 0.9999...
+saving model 0...

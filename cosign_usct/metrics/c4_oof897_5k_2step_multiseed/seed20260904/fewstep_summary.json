@@ -1,0 +1,41 @@
+{
+  "hint_mse": 149.91654939651488,
+  "hint_mae": 3.5936990857124327,
+  "hint_ssim": 0.863375712303799,
+  "results": [
+    {
+      "schedule": "2step_official",
+      "nfe": 2,
+      "ts": "0,17,39",
+      "mse_mean": 151.4877613067627,
+      "mse_std": 78.2610069416924,
+      "mae_mean": 5.154287695884705,
+      "mae_std": 1.7761849996894867,
+      "psnr_mean": 25.069793125765933,
+      "psnr_std": 2.4223195538352047,
+      "ssim_mean": 0.8378707133423035,
+      "ssim_std": 0.03382160685611128,
+      "mse_wins_vs_hint": 8,
+      "mae_wins_vs_hint": 0,
+      "ssim_wins_vs_hint": 2,
+      "mse_gain_vs_hint": -1.5712119102478255
+    }
+  ],
+  "best": {
+    "schedule": "2step_official",
+    "nfe": 2,
+    "ts": "0,17,39",
+    "mse_mean": 151.4877613067627,
+    "mse_std": 78.2610069416924,
+    "mae_mean": 5.154287695884705,
+    "mae_std": 1.7761849996894867,
+    "psnr_mean": 25.069793125765933,
+    "psnr_std": 2.4223195538352047,
+    "ssim_mean": 0.8378707133423035,
+    "ssim_std": 0.03382160685611128,
+    "mse_wins_vs_hint": 8,
+    "mae_wins_vs_hint": 0,
+    "ssim_wins_vs_hint": 2,
+    "mse_gain_vs_hint": -1.5712119102478255
+  }
+}

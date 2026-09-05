@@ -1,0 +1,166 @@
+================================================================================
+C5 CURRENT-DATA AUDIT — LEGACY AI4SCUP2 EXCLUDED
+================================================================================
+
+################################################################################
+ROOT=/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_dobs_train300_test50
+################################################################################
+
+---- size ----
+246M	/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_dobs_train300_test50
+
+---- file count ----
+1066
+
+---- extensions ----
+    559 png
+    400 npz
+    105 json
+      2 csv
+
+---- first files ----
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_dobs_train300_test50/cbs_correction_backtracking_tether0p1/aggregate.json
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_dobs_train300_test50/cbs_correction_backtracking_tether0p1/summary.json
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_dobs_train300_test50/cbs_correction_backtracking_tether0p1/test_1/config.json
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_dobs_train300_test50/cbs_correction_backtracking_tether0p1/test_1/final_result.npz
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_dobs_train300_test50/cbs_correction_backtracking_tether0p1/test_1/history.json
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_dobs_train300_test50/cbs_correction_backtracking_tether0p1/test_1/iter_000_condition_480.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_dobs_train300_test50/cbs_correction_backtracking_tether0p1/test_1/iter_000_corrected_480.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_dobs_train300_test50/cbs_correction_backtracking_tether0p1/test_1/iter_000_dobs_gt_abs.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_dobs_train300_test50/cbs_correction_backtracking_tether0p1/test_1/iter_000_dobs_pred_abs.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_dobs_train300_test50/cbs_correction_backtracking_tether0p1/test_1/iter_000_dobs_residual_abs.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_dobs_train300_test50/cbs_correction_backtracking_tether0p1/test_1/iter_000_dobs_residual_imag.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_dobs_train300_test50/cbs_correction_backtracking_tether0p1/test_1/iter_000_dobs_residual_real.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_dobs_train300_test50/cbs_correction_backtracking_tether0p1/test_1/iter_000_error_after.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_dobs_train300_test50/cbs_correction_backtracking_tether0p1/test_1/iter_000_error_before.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_dobs_train300_test50/cbs_correction_backtracking_tether0p1/test_1/iter_000_target_480.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_dobs_train300_test50/cbs_correction_backtracking_tether0p1/test_1/iter_000_update.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_dobs_train300_test50/cbs_correction_backtracking_tether0p1/test_10/config.json
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_dobs_train300_test50/cbs_correction_backtracking_tether0p1/test_10/final_result.npz
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_dobs_train300_test50/cbs_correction_backtracking_tether0p1/test_10/history.json
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_dobs_train300_test50/cbs_correction_backtracking_tether0p1/test_10/iter_000_condition_480.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_dobs_train300_test50/cbs_correction_backtracking_tether0p1/test_10/iter_000_corrected_480.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_dobs_train300_test50/cbs_correction_backtracking_tether0p1/test_10/iter_000_dobs_gt_abs.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_dobs_train300_test50/cbs_correction_backtracking_tether0p1/test_10/iter_000_dobs_pred_abs.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_dobs_train300_test50/cbs_correction_backtracking_tether0p1/test_10/iter_000_dobs_residual_abs.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_dobs_train300_test50/cbs_correction_backtracking_tether0p1/test_10/iter_000_dobs_residual_imag.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_dobs_train300_test50/cbs_correction_backtracking_tether0p1/test_10/iter_000_dobs_residual_real.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_dobs_train300_test50/cbs_correction_backtracking_tether0p1/test_10/iter_000_error_after.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_dobs_train300_test50/cbs_correction_backtracking_tether0p1/test_10/iter_000_error_before.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_dobs_train300_test50/cbs_correction_backtracking_tether0p1/test_10/iter_000_target_480.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_dobs_train300_test50/cbs_correction_backtracking_tether0p1/test_10/iter_000_update.png
+
+################################################################################
+ROOT=/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug
+################################################################################
+
+---- size ----
+46M	/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug
+
+---- file count ----
+357
+
+---- extensions ----
+    338 png
+     11 json
+      7 npz
+      1 txt
+
+---- first files ----
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/check_train_1/abs_diff.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/check_train_1/metrics.txt
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/check_train_1/rerun_imag.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/check_train_1/rerun_real.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/check_train_1/saved_imag.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/check_train_1/saved_real.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/condition_residual_test/test_1_condition_480.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/condition_residual_test/test_1_condition_minus_target.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/condition_residual_test/test_1_dobs_cond_abs.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/condition_residual_test/test_1_dobs_gt_abs.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/condition_residual_test/test_1_dobs_residual_abs.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/condition_residual_test/test_1_target_480.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/condition_residual_test/test_metrics.json
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/condition_residual_test_fixedT/test_1_condition_480.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/condition_residual_test_fixedT/test_1_condition_minus_target.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/condition_residual_test_fixedT/test_1_dobs_cond_abs.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/condition_residual_test_fixedT/test_1_dobs_gt_abs.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/condition_residual_test_fixedT/test_1_dobs_residual_abs.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/condition_residual_test_fixedT/test_1_target_480.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/condition_residual_test_fixedT/test_metrics.json
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/condition_residual_train/train_1_condition_480.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/condition_residual_train/train_1_condition_minus_target.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/condition_residual_train/train_1_dobs_cond_abs.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/condition_residual_train/train_1_dobs_gt_abs.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/condition_residual_train/train_1_dobs_residual_abs.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/condition_residual_train/train_1_target_480.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/condition_residual_train/train_2_condition_480.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/condition_residual_train/train_2_condition_minus_target.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/condition_residual_train/train_2_dobs_cond_abs.png
+/home/featurize/work/USCT_repro/USCT_download/self_consistent_cbs/sparse_64_debug/condition_residual_train/train_2_dobs_gt_abs.png
+
+################################################################################
+ROOT=/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/self_cbs
+################################################################################
+
+---- size ----
+25K	/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/self_cbs
+
+---- file count ----
+0
+
+---- extensions ----
+
+---- first files ----
+
+################################################################################
+ROOT=/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/local_alpha01
+################################################################################
+
+---- size ----
+41M	/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/local_alpha01
+
+---- file count ----
+63
+
+---- extensions ----
+     60 npz
+      3 json
+
+---- first files ----
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/local_alpha01/aggregate.json
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/local_alpha01/config.json
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/local_alpha01/meta_test.json
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/local_alpha01/test/test_000001.npz
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/local_alpha01/test/test_000002.npz
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/local_alpha01/test/test_000003.npz
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/local_alpha01/test/test_000004.npz
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/local_alpha01/test/test_000005.npz
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/local_alpha01/test/test_000006.npz
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/local_alpha01/test/test_000007.npz
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/local_alpha01/test/test_000008.npz
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/local_alpha01/test/test_000009.npz
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/local_alpha01/test/test_000010.npz
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/local_alpha01/test/test_000011.npz
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/local_alpha01/test/test_000012.npz
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/local_alpha01/test/test_000013.npz
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/local_alpha01/test/test_000014.npz
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/local_alpha01/test/test_000015.npz
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/local_alpha01/test/test_000016.npz
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/local_alpha01/test/test_000017.npz
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/local_alpha01/test/test_000018.npz
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/local_alpha01/test/test_000019.npz
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/local_alpha01/test/test_000020.npz
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/local_alpha01/test/test_000021.npz
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/local_alpha01/test/test_000022.npz
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/local_alpha01/test/test_000023.npz
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/local_alpha01/test/test_000024.npz
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/local_alpha01/test/test_000025.npz
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/local_alpha01/test/test_000026.npz
+/home/featurize/work/USCT_repro/USCT_download/dev30_test21_50/local_alpha01/test/test_000027.npz
+
+################################################################################
+ROOT=/home/featurize/work/USCT_repro/USCT_download/sparse_64_local_alpha_train100_test20
+################################################################################
+[MISSING]
+
+[PASS] current-data directory audit complete

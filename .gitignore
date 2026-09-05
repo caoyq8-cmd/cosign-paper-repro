@@ -1,0 +1,38 @@
+# 权重、数据集、大文件
+*.pth
+*.bin
+*.safetensors
+*.npz
+*.npy
+*.pt
+*.ckpt
+checkpoints/
+weights/
+datasets/
+data/
+*.zip
+*.tar
+*.gz
+
+# 实验输出
+runs/
+logs/
+outputs/
+*.log
+*.csv
+*.tsv
+
+# python缓存、虚拟环境
+__pycache__/
+*.pyc
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.DS_Store
+*.swp
+
+# 密钥环境文件
+*.env

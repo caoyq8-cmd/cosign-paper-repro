@@ -1,0 +1,143 @@
+Logging to /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/experiments/c2_edm_teacher_c256_r2_v2
+creating model and diffusion...
+creating data loader...
+dataset_mode=npy, data_dir=/home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/data/full_train_gt_norm.npy, global_batch_size=2, batch_size=-1, schedule_sampler=lognormal
+creating data loader...
+training...
+----------------------------
+| grad_norm     | 13.8     |
+| lg_loss_scale | 20       |
+| loss          | 0.721    |
+| loss_q0       | 0.721    |
+| mse           | 0.721    |
+| mse_q0        | 0.721    |
+| param_norm    | 334      |
+| samples       | 22       |
+| step          | 10       |
+| xs_mse        | 0.0367   |
+| xs_mse_q0     | 0.0367   |
+----------------------------
+----------------------------
+| grad_norm     | 17.6     |
+| lg_loss_scale | 20       |
+| loss          | 0.688    |
+| loss_q0       | 0.688    |
+| mse           | 0.688    |
+| mse_q0        | 0.688    |
+| param_norm    | 334      |
+| samples       | 42       |
+| step          | 20       |
+| xs_mse        | 0.0406   |
+| xs_mse_q0     | 0.0406   |
+----------------------------
+----------------------------
+| grad_norm     | 18.4     |
+| lg_loss_scale | 20       |
+| loss          | 0.617    |
+| loss_q0       | 0.617    |
+| mse           | 0.617    |
+| mse_q0        | 0.617    |
+| param_norm    | 334      |
+| samples       | 62       |
+| step          | 30       |
+| xs_mse        | 0.0427   |
+| xs_mse_q0     | 0.0427   |
+----------------------------
+----------------------------
+| grad_norm     | 17.8     |
+| lg_loss_scale | 20       |
+| loss          | 0.511    |
+| loss_q0       | 0.511    |
+| mse           | 0.511    |
+| mse_q0        | 0.511    |
+| param_norm    | 334      |
+| samples       | 82       |
+| step          | 40       |
+| xs_mse        | 0.0427   |
+| xs_mse_q0     | 0.0427   |
+----------------------------
+----------------------------
+| grad_norm     | 18.7     |
+| lg_loss_scale | 20       |
+| loss          | 0.587    |
+| loss_q0       | 0.587    |
+| mse           | 0.587    |
+| mse_q0        | 0.587    |
+| param_norm    | 334      |
+| samples       | 102      |
+| step          | 50       |
+| xs_mse        | 0.034    |
+| xs_mse_q0     | 0.034    |
+----------------------------
+----------------------------
+| grad_norm     | 18.1     |
+| lg_loss_scale | 20.1     |
+| loss          | 0.534    |
+| loss_q0       | 0.534    |
+| mse           | 0.534    |
+| mse_q0        | 0.534    |
+| param_norm    | 334      |
+| samples       | 122      |
+| step          | 60       |
+| xs_mse        | 0.0314   |
+| xs_mse_q0     | 0.0314   |
+----------------------------
+----------------------------
+| grad_norm     | 17.4     |
+| lg_loss_scale | 20.1     |
+| loss          | 0.54     |
+| loss_q0       | 0.54     |
+| mse           | 0.54     |
+| mse_q0        | 0.54     |
+| param_norm    | 334      |
+| samples       | 142      |
+| step          | 70       |
+| xs_mse        | 0.0237   |
+| xs_mse_q0     | 0.0237   |
+----------------------------
+Found NaN, decreased lg_loss_scale to 19.079000000000097
+----------------------------
+| grad_norm     | 17.7     |
+| lg_loss_scale | 20       |
+| loss          | 0.469    |
+| loss_q0       | 0.469    |
+| mse           | 0.469    |
+| mse_q0        | 0.469    |
+| param_norm    | 334      |
+| samples       | 162      |
+| step          | 80       |
+| xs_mse        | 0.0263   |
+| xs_mse_q0     | 0.0263   |
+----------------------------
+----------------------------
+| grad_norm     | 16.5     |
+| lg_loss_scale | 19.1     |
+| loss          | 0.447    |
+| loss_q0       | 0.447    |
+| mse           | 0.447    |
+| mse_q0        | 0.447    |
+| param_norm    | 334      |
+| samples       | 182      |
+| step          | 90       |
+| xs_mse        | 0.0273   |
+| xs_mse_q0     | 0.0273   |
+----------------------------
+----------------------------
+| grad_norm     | 17.9     |
+| lg_loss_scale | 19.1     |
+| loss          | 0.481    |
+| loss_q0       | 0.481    |
+| mse           | 0.481    |
+| mse_q0        | 0.481    |
+| param_norm    | 334      |
+| samples       | 202      |
+| step          | 100      |
+| xs_mse        | 0.0265   |
+| xs_mse_q0     | 0.0265   |
+----------------------------
+saving model 0.9999...
+saving model 0.9999432189950708...
+saving model 0...
+saving model 0.9999...
+saving model 0.9999432189950708...
+saving model 0...

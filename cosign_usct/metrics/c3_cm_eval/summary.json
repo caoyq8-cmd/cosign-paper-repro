@@ -1,0 +1,82 @@
+{
+  "protocol": {
+    "dataset": "VAL20",
+    "scale_indices": [
+      0,
+      6,
+      12,
+      18,
+      24,
+      30,
+      36,
+      39
+    ],
+    "sigmas": [
+      80.0,
+      32.696889380854536,
+      11.718514020336542,
+      3.5196988314663527,
+      0.8229413685126805,
+      0.13119736304372648,
+      0.010812046594589668,
+      0.002000000000000003
+    ],
+    "num_repeats": 2,
+    "base_seed": 20260903,
+    "selection_metric": "raw normalized clean-space MSE",
+    "note": "All checkpoints use identical GT, sigma and noise seeds."
+  },
+  "ranking": [
+    {
+      "candidate": "cm25k_ema09999",
+      "checkpoint": "/home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/experiments/c3_cm_c256_e50k_v1/ema_0.9999_025000.pt",
+      "n_val": 20,
+      "num_scales": 8,
+      "num_repeats": 2,
+      "num_forward_evals": 320,
+      "norm_mse_mean": 0.02951223364477613,
+      "norm_mse_std": 0.032550982805867504,
+      "norm_mae_mean": 0.0881554271789355,
+      "speed_mse_mean": 310.05785715974633,
+      "speed_mae_mean": 9.035875486163423,
+      "psnr_mean": 31.101424604098405,
+      "ssim_mean": 0.546477103619504,
+      "ssim_available": true,
+      "rank": 1
+    },
+    {
+      "candidate": "cm50k_ema09999",
+      "checkpoint": "/home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/experiments/c3_cm_c256_e50k_v1/ema_0.9999_050000.pt",
+      "n_val": 20,
+      "num_scales": 8,
+      "num_repeats": 2,
+      "num_forward_evals": 320,
+      "norm_mse_mean": 0.03164073384826196,
+      "norm_mse_std": 0.034260297346591376,
+      "norm_mae_mean": 0.09327325453305094,
+      "speed_mse_mean": 332.4060946335434,
+      "speed_mae_mean": 9.560316684981808,
+      "psnr_mean": 30.803071568659345,
+      "ssim_mean": 0.5232565512509545,
+      "ssim_available": true,
+      "rank": 2
+    }
+  ],
+  "best": {
+    "candidate": "cm25k_ema09999",
+    "checkpoint": "/home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/experiments/c3_cm_c256_e50k_v1/ema_0.9999_025000.pt",
+    "n_val": 20,
+    "num_scales": 8,
+    "num_repeats": 2,
+    "num_forward_evals": 320,
+    "norm_mse_mean": 0.02951223364477613,
+    "norm_mse_std": 0.032550982805867504,
+    "norm_mae_mean": 0.0881554271789355,
+    "speed_mse_mean": 310.05785715974633,
+    "speed_mae_mean": 9.035875486163423,
+    "psnr_mean": 31.101424604098405,
+    "ssim_mean": 0.546477103619504,
+    "ssim_available": true,
+    "rank": 1
+  }
+}

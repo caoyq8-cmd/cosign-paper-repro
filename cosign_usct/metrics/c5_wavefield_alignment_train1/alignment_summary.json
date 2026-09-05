@@ -1,0 +1,101 @@
+{
+  "sample": "self_consistent_cbs/sparse_64_dobs_train300_test50/train/train_1.npz",
+  "source_positions": [
+    0,
+    8,
+    16,
+    24,
+    32,
+    40,
+    48,
+    56
+  ],
+  "frequency": 500000.0,
+  "cbs_iters": 80,
+  "boundary_width": 300,
+  "boundary_strength": 225.0,
+  "boundary_type": "PML3",
+  "complex_rrmse": 1.8400309897970146e-07,
+  "relative_l1": 3.6949967352484236e-07,
+  "complex_cosine": 1.0,
+  "mean_abs_saved": 0.04519641771912575,
+  "mean_abs_regenerated": 0.04519641771912575,
+  "mean_abs_diff": 1.6700061777896735e-08,
+  "max_abs_diff": 8.940696716308594e-08,
+  "real_rmse": 1.429169405042785e-08,
+  "imag_rmse": 1.2828467177428138e-08,
+  "per_source": [
+    {
+      "source_position": 0,
+      "source_coord": [
+        246,
+        19
+      ],
+      "rrmse": 1.586609528203553e-07,
+      "mean_abs_diff": 1.4716752261278998e-08
+    },
+    {
+      "source_position": 8,
+      "source_coord": [
+        398,
+        85
+      ],
+      "rrmse": 1.9919200155982253e-07,
+      "mean_abs_diff": 1.6958303206138226e-08
+    },
+    {
+      "source_position": 16,
+      "source_coord": [
+        461,
+        245
+      ],
+      "rrmse": 1.863297569570932e-07,
+      "mean_abs_diff": 1.691463502595525e-08
+    },
+    {
+      "source_position": 24,
+      "source_coord": [
+        395,
+        397
+      ],
+      "rrmse": 1.814241130659866e-07,
+      "mean_abs_diff": 1.6946849257237773e-08
+    },
+    {
+      "source_position": 32,
+      "source_coord": [
+        235,
+        461
+      ],
+      "rrmse": 1.7166789234579483e-07,
+      "mean_abs_diff": 1.6273265401878234e-08
+    },
+    {
+      "source_position": 40,
+      "source_coord": [
+        83,
+        396
+      ],
+      "rrmse": 1.7415878517113015e-07,
+      "mean_abs_diff": 1.6301168415111533e-08
+    },
+    {
+      "source_position": 48,
+      "source_coord": [
+        19,
+        236
+      ],
+      "rrmse": 2.066962849767151e-07,
+      "mean_abs_diff": 1.7712974198502707e-08
+    },
+    {
+      "source_position": 56,
+      "source_coord": [
+        84,
+        84
+      ],
+      "rrmse": 1.8924443168089056e-07,
+      "mean_abs_diff": 1.7776546457071163e-08
+    }
+  ]
+}

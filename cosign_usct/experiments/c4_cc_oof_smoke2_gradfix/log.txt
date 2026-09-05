@@ -1,0 +1,37 @@
+Logging to /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/experiments/c4_cc_oof_smoke2_gradfix
+===== C4 USCT Conditional CM =====
+gt_npy   = /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/data/smoke_train_gt_norm.npy
+hint_npy = /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/data/smoke_train_cond_norm.npy
+unet     = /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/checkpoints/c3_cm_best_ema25k.pt
+steps    = 2
+batch    = 1
+loss     = recon/l2
+creating ControlNet / ControlledUnet / diffusion...
+loading C3 backbone from /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/checkpoints/c3_cm_best_ema25k.pt
+ControlNet init: missing=40, unexpected=324
+creating paired GT/OOF-hint loader...
+preflight GT   shape=(1, 1, 256, 256) range=(-0.479437,0.488941)
+preflight hint shape=(1, 1, 256, 256) range=(-0.415746,0.951219)
+training...
+----------------------------
+| grad_norm     | 2.17e-05 |
+| lg_loss_scale | 20       |
+| loss          | 2.58e-05 |
+| loss_q1       | 2.58e-05 |
+| param_norm    | 214      |
+| samples       | 2        |
+| step          | 1        |
+----------------------------
+----------------------------
+| grad_norm     | 0.0126   |
+| lg_loss_scale | 20       |
+| loss          | 0.00639  |
+| loss_q3       | 0.00639  |
+| param_norm    | 214      |
+| samples       | 3        |
+| step          | 2        |
+----------------------------
+saving model 0.9999...
+saving optimizer state...
+saving model 0...
+[PASS] C4 training completed.

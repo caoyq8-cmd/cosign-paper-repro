@@ -1,0 +1,17 @@
+C3 Consistency Distillation 256-channel three-model smoke: PASS
+
+Validated:
+- 897-sample NPY loader
+- 256-channel student
+- frozen EDM teacher
+- 256-channel target model
+- FP16
+- activation checkpointing
+- consistency forward
+- backward
+- optimizer update
+- student EMA update
+- target EMA update
+- checkpoint save
+
+This run is a one-step feasibility test only.

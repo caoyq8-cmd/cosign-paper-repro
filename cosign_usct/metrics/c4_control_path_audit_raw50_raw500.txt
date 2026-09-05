@@ -1,0 +1,72 @@
+/home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/scripts/audit_c4_control_path.py:125: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  groups[g]["delta_ss"] += float((d * d).sum())
+
+==========================================================================================
+PARAMETER DELTA: RAW50 -> RAW500
+==========================================================================================
+input_blocks         keys=212 delta_rms=2.802006e-04 current_rms=1.563379e-02 delta/current=1.792276e-02
+input_hint_block     keys=  2 delta_rms=3.438036e-03 current_rms=3.474219e-03 delta/current=9.895854e-01
+middle_block         keys= 26 delta_rms=1.521711e-05 current_rms=1.320529e-02 delta/current=1.152350e-03
+middle_block_out     keys=  2 delta_rms=1.324796e-04 current_rms=1.404125e-04 delta/current=9.435031e-01
+time_embed           keys=  4 delta_rms=8.483325e-04 current_rms=2.308231e-02 delta/current=3.675249e-02
+zero_convs           keys= 36 delta_rms=4.425639e-04 current_rms=4.613902e-04 delta/current=9.591967e-01
+
+==========================================================================================
+CONTROL FEATURE SENSITIVITY
+==========================================================================================
+
+sigma=80
+ control RMS                = 7.646301e-01
+ correct-zero diff RMS      = 4.133143e-04
+ correct-shuffled diff RMS  = 2.386100e-04
+ correct-zero relative      = 5.405414e-04
+ correct-shuffled relative  = 3.120594e-04
+
+  per-layer @ sigma80
+  layer=00 RMS=8.004478e-02 diff_zero=1.073530e-05 diff_shuffle=7.142404e-06
+  layer=01 RMS=4.392884e-01 diff_zero=6.942139e-05 diff_shuffle=4.991530e-05
+  layer=02 RMS=7.670236e-01 diff_zero=1.564972e-04 diff_shuffle=1.163986e-04
+  layer=03 RMS=8.122475e-01 diff_zero=1.872801e-04 diff_shuffle=1.328596e-04
+  layer=04 RMS=8.760002e-01 diff_zero=2.359114e-04 diff_shuffle=1.587948e-04
+  layer=05 RMS=1.167315e+00 diff_zero=5.240971e-04 diff_shuffle=3.330277e-04
+  layer=06 RMS=1.085119e+00 diff_zero=5.001535e-04 diff_shuffle=3.080457e-04
+  layer=07 RMS=1.669893e+00 diff_zero=1.401892e-03 diff_shuffle=7.874192e-04
+  layer=08 RMS=1.471679e+00 diff_zero=1.217720e-03 diff_shuffle=6.790485e-04
+  layer=09 RMS=1.358112e+00 diff_zero=1.112587e-03 diff_shuffle=6.043676e-04
+  layer=10 RMS=1.552476e+00 diff_zero=1.267249e-03 diff_shuffle=6.860899e-04
+  layer=11 RMS=1.544422e+00 diff_zero=1.270447e-03 diff_shuffle=6.877695e-04
+  layer=12 RMS=1.290827e+00 diff_zero=9.222170e-04 diff_shuffle=4.733875e-04
+  layer=13 RMS=1.029316e+00 diff_zero=4.903271e-04 diff_shuffle=2.397406e-04
+  layer=14 RMS=1.251192e+00 diff_zero=3.593265e-04 diff_shuffle=1.877121e-04
+  layer=15 RMS=8.404772e-01 diff_zero=1.251588e-04 diff_shuffle=5.263555e-05
+  layer=16 RMS=1.172708e+00 diff_zero=1.055747e-04 diff_shuffle=4.564743e-05
+  layer=17 RMS=1.164215e+00 diff_zero=9.582845e-05 diff_shuffle=4.230778e-05
+  layer=18 RMS=1.515737e+00 diff_zero=1.168526e-04 diff_shuffle=4.871648e-05
+
+sigma=10
+ control RMS                = 7.034896e-01
+ correct-zero diff RMS      = 3.877373e-03
+ correct-shuffled diff RMS  = 2.211419e-03
+ correct-zero relative      = 5.511627e-03
+ correct-shuffled relative  = 3.143499e-03
+
+sigma=1
+ control RMS                = 3.551846e-01
+ correct-zero diff RMS      = 7.975374e-03
+ correct-shuffled diff RMS  = 6.345866e-03
+ correct-zero relative      = 2.245417e-02
+ correct-shuffled relative  = 1.786639e-02
+
+sigma=0.1
+ control RMS                = 2.143972e-01
+ correct-zero diff RMS      = 1.896255e-02
+ correct-shuffled diff RMS  = 1.483079e-02
+ correct-zero relative      = 8.844590e-02
+ correct-shuffled relative  = 6.917437e-02
+
+[PASS] control-path audit complete
+Traceback (most recent call last):
+  File "/home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/scripts/audit_c4_control_path.py", line 329, in <module>
+    PYcat > "$CUSCT/scripts/audit_c4_control_path.py" <<'PY'
+NameError: name 'PYcat' is not defined

@@ -1,0 +1,62 @@
+{
+  "background_speed": 1500.0,
+  "train_images": 20,
+  "val_images": 5,
+  "results": {
+    "zero": {
+      "train": {
+        "full_rrmse": 1.0,
+        "receiver_rrmse": 1.0,
+        "sample_full_mean": 1.0,
+        "sample_full_std": 0.0,
+        "sample_rec_mean": 1.0,
+        "sample_rec_std": 0.0
+      },
+      "val": {
+        "full_rrmse": 1.0,
+        "receiver_rrmse": 1.0,
+        "sample_full_mean": 1.0,
+        "sample_full_std": 0.0,
+        "sample_rec_mean": 1.0,
+        "sample_rec_std": 0.0
+      }
+    },
+    "homogeneous_1500": {
+      "train": {
+        "full_rrmse": 0.9020952162163062,
+        "receiver_rrmse": 0.2436857819678112,
+        "sample_full_mean": 0.8990313936306153,
+        "sample_full_std": 0.07374664864784636,
+        "sample_rec_mean": 0.24330194519522594,
+        "sample_rec_std": 0.01370652679022797
+      },
+      "val": {
+        "full_rrmse": 0.8954042529992055,
+        "receiver_rrmse": 0.23444721541036503,
+        "sample_full_mean": 0.8933463864982233,
+        "sample_full_std": 0.06037289601521763,
+        "sample_rec_mean": 0.2338095372540888,
+        "sample_rec_std": 0.0174075982321328
+      }
+    },
+    "train_mean": {
+      "train": {
+        "full_rrmse": 0.5629632843412496,
+        "receiver_rrmse": 0.15951361158167765,
+        "sample_full_mean": 0.557102791017449,
+        "sample_full_std": 0.08094574245224552,
+        "sample_rec_mean": 0.15855754986577555,
+        "sample_rec_std": 0.017468520433670885
+      },
+      "val": {
+        "full_rrmse": 0.6076751200021782,
+        "receiver_rrmse": 0.17071617266328787,
+        "sample_full_mean": 0.6025955294236413,
+        "sample_full_std": 0.07828481042133524,
+        "sample_rec_mean": 0.1695802493679543,
+        "sample_rec_std": 0.0196341283172145
+      }
+    }
+  },
+  "scattered_relative_norm_train": 0.9020952162163062
+}
