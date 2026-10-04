@@ -1,0 +1,78 @@
+Logging to /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/experiments/c4_cc_oof3600_smoke50_v4
+===== C4 USCT Conditional CM =====
+gt_npy   = /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/data_3600_400/full_train_gt_norm.npy
+hint_npy = /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/data_3600_400/full_train_cond_norm.npy
+unet     = /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/checkpoints/c3_cm_best_ema25k.pt
+steps    = 50
+batch    = 1
+loss     = recon/l2
+creating ControlNet / ControlledUnet / diffusion...
+loading C3 backbone from /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/checkpoints/c3_cm_best_ema25k.pt
+ControlNet init: missing=40, unexpected=324
+creating paired GT/OOF-hint loader...
+preflight GT   shape=(1, 1, 256, 256) range=(-0.720917,0.439369)
+preflight hint shape=(1, 1, 256, 256) range=(-0.768075,0.951219)
+training...
+save_mode = raw
+----------------------------
+| grad_norm     | 0.171    |
+| lg_loss_scale | 20       |
+| loss          | 0.194    |
+| loss_q0       | 0.18     |
+| loss_q1       | 0.246    |
+| loss_q2       | 0.223    |
+| loss_q3       | 0.133    |
+| param_norm    | 214      |
+| samples       | 11       |
+| step          | 10       |
+----------------------------
+----------------------------
+| grad_norm     | 0.157    |
+| lg_loss_scale | 20       |
+| loss          | 0.177    |
+| loss_q0       | 0.139    |
+| loss_q1       | 0.244    |
+| loss_q2       | 0.203    |
+| loss_q3       | 0.142    |
+| param_norm    | 214      |
+| samples       | 21       |
+| step          | 20       |
+----------------------------
+----------------------------
+| grad_norm     | 0.192    |
+| lg_loss_scale | 20       |
+| loss          | 0.191    |
+| loss_q0       | 0.322    |
+| loss_q1       | 0.157    |
+| loss_q2       | 0.12     |
+| loss_q3       | 0.114    |
+| param_norm    | 214      |
+| samples       | 31       |
+| step          | 30       |
+----------------------------
+----------------------------
+| grad_norm     | 0.17     |
+| lg_loss_scale | 20       |
+| loss          | 0.187    |
+| loss_q0       | 0.209    |
+| loss_q1       | 0.139    |
+| loss_q2       | 0.235    |
+| loss_q3       | 0.166    |
+| param_norm    | 214      |
+| samples       | 41       |
+| step          | 40       |
+----------------------------
+----------------------------
+| grad_norm     | 0.137    |
+| lg_loss_scale | 20       |
+| loss          | 0.147    |
+| loss_q0       | 0.168    |
+| loss_q1       | 0.15     |
+| loss_q2       | 0.0899   |
+| loss_q3       | 0.247    |
+| param_norm    | 214      |
+| samples       | 51       |
+| step          | 50       |
+----------------------------
+saving RAW-ONLY checkpoint to /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/experiments/c4_cc_oof3600_smoke50_v4/model000050.pt
+[PASS] C4 training completed.

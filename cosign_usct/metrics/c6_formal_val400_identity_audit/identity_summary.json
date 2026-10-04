@@ -1,0 +1,151 @@
+{
+  "mapping_0based": [
+    262,
+    380,
+    6,
+    106,
+    78,
+    138,
+    166,
+    161,
+    374,
+    41
+  ],
+  "mapping_1based": [
+    263,
+    381,
+    7,
+    107,
+    79,
+    139,
+    167,
+    162,
+    375,
+    42
+  ],
+  "unique_mapping": true,
+  "all_exact": false,
+  "all_direct": false,
+  "rows": [
+    {
+      "c6_test_id": 1,
+      "direct_formal_index_0based": 0,
+      "direct_mse_mps2": 847.1912231445312,
+      "direct_rrmse": 0.01952381618320942,
+      "best_formal_index_0based": 262,
+      "best_formal_index_1based": 263,
+      "best_mse_mps2": 94.00355529785156,
+      "best_rrmse": 0.006503485608845949,
+      "same_direct_order": false,
+      "exact_match": false
+    },
+    {
+      "c6_test_id": 2,
+      "direct_formal_index_0based": 1,
+      "direct_mse_mps2": 411.7344665527344,
+      "direct_rrmse": 0.013582292944192886,
+      "best_formal_index_0based": 380,
+      "best_formal_index_1based": 381,
+      "best_mse_mps2": 67.86909484863281,
+      "best_rrmse": 0.005514428019523621,
+      "same_direct_order": false,
+      "exact_match": false
+    },
+    {
+      "c6_test_id": 3,
+      "direct_formal_index_0based": 2,
+      "direct_mse_mps2": 767.8823852539062,
+      "direct_rrmse": 0.018621210008859634,
+      "best_formal_index_0based": 6,
+      "best_formal_index_1based": 7,
+      "best_mse_mps2": 355.8507995605469,
+      "best_rrmse": 0.012676360085606575,
+      "same_direct_order": false,
+      "exact_match": false
+    },
+    {
+      "c6_test_id": 4,
+      "direct_formal_index_0based": 3,
+      "direct_mse_mps2": 693.6217041015625,
+      "direct_rrmse": 0.017611438408493996,
+      "best_formal_index_0based": 106,
+      "best_formal_index_1based": 107,
+      "best_mse_mps2": 583.7191772460938,
+      "best_rrmse": 0.016156060621142387,
+      "same_direct_order": false,
+      "exact_match": false
+    },
+    {
+      "c6_test_id": 5,
+      "direct_formal_index_0based": 4,
+      "direct_mse_mps2": 789.134765625,
+      "direct_rrmse": 0.018860386684536934,
+      "best_formal_index_0based": 78,
+      "best_formal_index_1based": 79,
+      "best_mse_mps2": 290.9898986816406,
+      "best_rrmse": 0.01145285926759243,
+      "same_direct_order": false,
+      "exact_match": false
+    },
+    {
+      "c6_test_id": 6,
+      "direct_formal_index_0based": 5,
+      "direct_mse_mps2": 637.8233642578125,
+      "direct_rrmse": 0.017008567228913307,
+      "best_formal_index_0based": 138,
+      "best_formal_index_1based": 139,
+      "best_mse_mps2": 180.38604736328125,
+      "best_rrmse": 0.009045216254889965,
+      "same_direct_order": false,
+      "exact_match": false
+    },
+    {
+      "c6_test_id": 7,
+      "direct_formal_index_0based": 6,
+      "direct_mse_mps2": 858.3113403320312,
+      "direct_rrmse": 0.019804783165454865,
+      "best_formal_index_0based": 166,
+      "best_formal_index_1based": 167,
+      "best_mse_mps2": 282.3692626953125,
+      "best_rrmse": 0.011359426192939281,
+      "same_direct_order": false,
+      "exact_match": false
+    },
+    {
+      "c6_test_id": 8,
+      "direct_formal_index_0based": 7,
+      "direct_mse_mps2": 1361.1561279296875,
+      "direct_rrmse": 0.024852434173226357,
+      "best_formal_index_0based": 161,
+      "best_formal_index_1based": 162,
+      "best_mse_mps2": 101.4775161743164,
+      "best_rrmse": 0.006785781122744083,
+      "same_direct_order": false,
+      "exact_match": false
+    },
+    {
+      "c6_test_id": 9,
+      "direct_formal_index_0based": 8,
+      "direct_mse_mps2": 773.6423950195312,
+      "direct_rrmse": 0.01878974586725235,
+      "best_formal_index_0based": 374,
+      "best_formal_index_1based": 375,
+      "best_mse_mps2": 280.4701232910156,
+      "best_rrmse": 0.01131342351436615,
+      "same_direct_order": false,
+      "exact_match": false
+    },
+    {
+      "c6_test_id": 10,
+      "direct_formal_index_0based": 9,
+      "direct_mse_mps2": 529.9041137695312,
+      "direct_rrmse": 0.015344913117587566,
+      "best_formal_index_0based": 41,
+      "best_formal_index_1based": 42,
+      "best_mse_mps2": 234.37081909179688,
+      "best_rrmse": 0.010205107741057873,
+      "same_direct_order": false,
+      "exact_match": false
+    }
+  ]
+}

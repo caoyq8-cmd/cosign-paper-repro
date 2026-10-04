@@ -124,7 +124,10 @@ class USCTCCTrainLoop(CCTrainLoop):
             if self.step % self.log_interval == 0:
                 logger.dumpkvs()
 
-            if self.step % self.save_interval == 0:
+            if (
+                self.step > 0
+                and self.step % self.save_interval == 0
+            ):
                 self.save()
 
         if self.step % self.save_interval != 0:

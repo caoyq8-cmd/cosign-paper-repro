@@ -1,0 +1,10 @@
+Logging to /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/experiments/c4_cc_oof3600_smoke50
+===== C4 USCT Conditional CM =====
+gt_npy   = /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/data_3600_400/full_train_gt_norm.npy
+hint_npy = /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/data_3600_400/full_train_cond_norm.npy
+unet     = /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/checkpoints/c3_cm_best_ema25k.pt
+steps    = 50
+batch    = 1
+loss     = recon/l2
+creating ControlNet / ControlledUnet / diffusion...
+loading C3 backbone from /home/featurize/work/USCT_repro/paper_reproduction/cosign_usct/checkpoints/c3_cm_best_ema25k.pt
